@@ -188,18 +188,19 @@
 
         /* Hero Section with Background Image */
         #home .content-section {
-
-            background: #2c3e50 url('./background.jpeg') center/cover no-repeat fixed;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./background.jpeg');
-            color: white;
-            min-height: 600px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 3rem 2rem;
-            position: relative;
-  
-        }
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./background.jpg') center/cover no-repeat fixed;
+    color: white;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
 
         #home .content-section * {
             position: relative;
@@ -394,39 +395,23 @@
         </div>
     </footer>
 
-<script>
-    function showPage(pageName) {
-        // Hide all pages
-        const pages = document.querySelectorAll('.page');
-        pages.forEach(page => page.classList.remove('active'));
-        
-        // Show selected page
-        const target = document.getElementById(pageName);
-        if (target) target.classList.add('active');
-
-        // Update navigation active state
-        const navLinks = document.querySelectorAll('.nav-link');
-        navLinks.forEach(link => link.classList.remove('active'));
-        const activeLink = document.querySelector(`.nav-link[href="#${pageName}"]`);
-        if (activeLink) activeLink.classList.add('active');
-
-        // Scroll to top
-        window.scrollTo(0, 0);
-    }
-
-    // Automatically show page based on URL hash
-    window.addEventListener('load', () => {
-        const hash = window.location.hash.replace('#', '') || 'home';
-        showPage(hash);
-    });
-
-    // Enable navigation with updated hash on click
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', (event) => {
-            event.preventDefault();
-            const pageName = link.getAttribute('href').replace('#', '');
-            showPage(pageName);
-            history.pushState(null, null, '#' + pageName);  // update URL
-        });
-    });
-</script>
+    <script>
+        function showPage(pageName) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            // Show selected page
+            document.getElementById(pageName).classList.add('active');
+            
+            // Update navigation active state
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => link.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>

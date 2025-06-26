@@ -394,23 +394,39 @@
         </div>
     </footer>
 
-    <script>
-        function showPage(pageName) {
-            // Hide all pages
-            const pages = document.querySelectorAll('.page');
-            pages.forEach(page => page.classList.remove('active'));
-            
-            // Show selected page
-            document.getElementById(pageName).classList.add('active');
-            
-            // Update navigation active state
-            const navLinks = document.querySelectorAll('.nav-link');
-            navLinks.forEach(link => link.classList.remove('active'));
-            event.target.classList.add('active');
-            
-            // Scroll to top
-            window.scrollTo(0, 0);
-        }
-    </script>
-</body>
-</html>
+<script>
+    function showPage(pageName) {
+        // Hide all pages
+        const pages = document.querySelectorAll('.page');
+        pages.forEach(page => page.classList.remove('active'));
+        
+        // Show selected page
+        const target = document.getElementById(pageName);
+        if (target) target.classList.add('active');
+
+        // Update navigation active state
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => link.classList.remove('active'));
+        const activeLink = document.querySelector(`.nav-link[href="#${pageName}"]`);
+        if (activeLink) activeLink.classList.add('active');
+
+        // Scroll to top
+        window.scrollTo(0, 0);
+    }
+
+    // Automatically show page based on URL hash
+    window.addEventListener('load', () => {
+        const hash = window.location.hash.replace('#', '') || 'home';
+        showPage(hash);
+    });
+
+    // Enable navigation with updated hash on click
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            const pageName = link.getAttribute('href').replace('#', '');
+            showPage(pageName);
+            history.pushState(null, null, '#' + pageName);  // update URL
+        });
+    });
+</script>

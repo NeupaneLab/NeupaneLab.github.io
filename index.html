@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suman Neupane - Assistant Professor of Biology</title>
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Suman Neupane - Assistant Professor of Biology</title>
+<style>
         * {
             margin: 0;
             padding: 0;
@@ -227,175 +228,194 @@
         #home .content-section a:hover {
             color: #aed6f1;
         }     
-    </style>
+    
+#home .content-section {
+    position: relative;
+    overflow: hidden;
+}
+
+#home .content-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 0;
+}
+
+#home .content-section .hero-text {
+    max-width: 800px;
+    text-align: center;
+    padding: 2rem;
+    z-index: 1;
+    position: relative;
+}
+
+.hero-button {
+    background-color: #ffffff;
+    color: #2c3e50;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 1.5rem;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.hero-button:hover {
+    background-color: #ecf0f1;
+}
+</style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <h1>Suman Neupane</h1>
-                <nav>
-                    <ul>
-                        <li><a href="#home" class="nav-link active" onclick="showPage('home')">Home</a></li>
-                        <li><a href="#research" class="nav-link" onclick="showPage('research')">Research</a></li>
-                        <li><a href="#cv" class="nav-link" onclick="showPage('cv')">CV</a></li>
-                        <li><a href="#contact" class="nav-link" onclick="showPage('contact')">Contact</a></li>
-                        <li><a href="#tutorials" class="nav-link" onclick="showPage('tutorials')">Tutorials</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-
-    <main class="container">
-        <!-- Home Page -->
-        <div id="home" class="page active">
-            <div class="content-section">
-                <h2>Welcome to my website!</h2>
-                <p>I am an Assistant Professor of Biology at Ball State University.</p>
-                
-                <p>In our lab, we construct evolutionary trees of living organisms, mainly plants, known as phylogenies. We utilize DNA and morphological trait data to build these phylogenies. By analyzing these phylogenies, we investigate the how, where, and when different groups of plants (and animals) have evolved over macroevolutionary timescales. Additionally, we contribute to organizing the vast diversity of living organisms into distinct groups based on their evolutionary relationships, a field known as systematics.</p>
-                
-                <h3>Areas of Research</h3>
-                <p>Areas of research in our lab include:</p>
-                <ul>
-                    <li>Plant Systematics</li>
-                    <li>Phylogenetics Theory & Comparative Methods</li>
-                    <li>Bioinformatics</li>
-                    <li>Macroevolutionary Processes</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Research Page -->
-        <div id="research" class="page">
-            <div class="content-section">
-                <h2>Research</h2>
-                <p>Understanding and conserving biodiversity is the underlying theme of my research, which primarily involves:</p>
-                <ol>
-                    <li>Documenting plant diversity</li>
-                    <li>Studying evolutionary processes that shape the current plant diversity in the tropics</li>
-                </ol>
-                
-                <h3>Current Research Projects</h3>
-                <p>Our lab focuses on constructing phylogenies using both molecular and morphological data. We are particularly interested in understanding the evolution of plant groups in tropical regions and their biogeographic patterns.</p>
-                
-                <h3>Methodological Approaches</h3>
-                <p>We incorporate a range of techniques including:</p>
-                <ul>
-                    <li>DNA sequencing and phylogenomic analyses</li>
-                    <li>Morphological character analysis</li>
-                    <li>Comparative methods in phylogenetics</li>
-                    <li>Biogeographic modeling</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- CV Page -->
-        <div id="cv" class="page">
-            <div class="content-section">
-                <h2>Curriculum Vitae</h2>
-                
-                <div class="cv-section">
-                    <h3>Suman Neupane</h3>
-                    <p>Department of Biology<br>
-                    Ball State University, Muncie, IN 47306 USA<br>
-                    <a href="#">Department Website</a> | <a href="#">Google Scholar Profile</a></p>
-                </div>
-
-                <div class="cv-section">
-                    <h3>Research Interests</h3>
-                    <p>Plant Systematics | Macroevolution | Phylogenetics Theory & Comparative Methods | Bioinformatics</p>
-                </div>
-
-                <div class="cv-section">
-                    <h3>Education</h3>
-                    <div class="cv-item">
-                        <strong>2016:</strong> PhD, Department of Ecology & Evolutionary Biology, University of Connecticut, Storrs, CT, USA<br>
-                        <em>Dissertation:</em> Phylogenetics, Secondary Wood Evolution and Diversification in Asian-Pacific Hedyotis-Oldenlandia Complex (Rubiaceae)
+<header>
+<div class="container">
+<div class="header-content">
+<h1>Suman Neupane</h1>
+<nav>
+<ul>
+<li><a class="nav-link active" href="#home" onclick="showPage('home')">Home</a></li>
+<li><a class="nav-link" href="#research" onclick="showPage('research')">Research</a></li>
+<li><a class="nav-link" href="#cv" onclick="showPage('cv')">CV</a></li>
+<li><a class="nav-link" href="#contact" onclick="showPage('contact')">Contact</a></li>
+<li><a class="nav-link" href="#tutorials" onclick="showPage('tutorials')">Tutorials</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<main class="container">
+<!-- Home Page -->
+<div class="page active" id="home">
+<div class="content-section"><div class="hero-text">
+<h2>Welcome to my website!</h2>
+<p>I am an Assistant Professor of Biology at Ball State University.</p>
+<p>In our lab, we construct evolutionary trees of living organisms, mainly plants, known as phylogenies. We utilize DNA and morphological trait data to build these phylogenies. By analyzing these phylogenies, we investigate the how, where, and when different groups of plants (and animals) have evolved over macroevolutionary timescales. Additionally, we contribute to organizing the vast diversity of living organisms into distinct groups based on their evolutionary relationships, a field known as systematics.</p>
+<h3>Areas of Research</h3>
+<p>Areas of research in our lab include:</p>
+<ul>
+<li>Plant Systematics</li>
+<li>Phylogenetics Theory &amp; Comparative Methods</li>
+<li>Bioinformatics</li>
+<li>Macroevolutionary Processes</li>
+</ul>
+<a class="hero-button" href="#research">Explore Research</a></div></div>
+</div>
+<!-- Research Page -->
+<div class="page" id="research">
+<div class="content-section">
+<h2>Research</h2>
+<p>Understanding and conserving biodiversity is the underlying theme of my research, which primarily involves:</p>
+<ol>
+<li>Documenting plant diversity</li>
+<li>Studying evolutionary processes that shape the current plant diversity in the tropics</li>
+</ol>
+<h3>Current Research Projects</h3>
+<p>Our lab focuses on constructing phylogenies using both molecular and morphological data. We are particularly interested in understanding the evolution of plant groups in tropical regions and their biogeographic patterns.</p>
+<h3>Methodological Approaches</h3>
+<p>We incorporate a range of techniques including:</p>
+<ul>
+<li>DNA sequencing and phylogenomic analyses</li>
+<li>Morphological character analysis</li>
+<li>Comparative methods in phylogenetics</li>
+<li>Biogeographic modeling</li>
+</ul>
+</div>
+</div>
+<!-- CV Page -->
+<div class="page" id="cv">
+<div class="content-section">
+<h2>Curriculum Vitae</h2>
+<div class="cv-section">
+<h3>Suman Neupane</h3>
+<p>Department of Biology<br/>
+                    Ball State University, Muncie, IN 47306 USA<br/>
+<a href="#">Department Website</a> | <a href="#">Google Scholar Profile</a></p>
+</div>
+<div class="cv-section">
+<h3>Research Interests</h3>
+<p>Plant Systematics | Macroevolution | Phylogenetics Theory &amp; Comparative Methods | Bioinformatics</p>
+</div>
+<div class="cv-section">
+<h3>Education</h3>
+<div class="cv-item">
+<strong>2016:</strong> PhD, Department of Ecology &amp; Evolutionary Biology, University of Connecticut, Storrs, CT, USA<br/>
+<em>Dissertation:</em> Phylogenetics, Secondary Wood Evolution and Diversification in Asian-Pacific Hedyotis-Oldenlandia Complex (Rubiaceae)
                     </div>
-                    <div class="cv-item">
-                        <strong>2006:</strong> Master of Science in Botany, Tribhuvan University, Kirtipur, Kathmandu, Nepal
+<div class="cv-item">
+<strong>2006:</strong> Master of Science in Botany, Tribhuvan University, Kirtipur, Kathmandu, Nepal
                     </div>
-                    <div class="cv-item">
-                        <strong>2001:</strong> BS in Biology, Amrit Science College, Tribhuvan University, Nepal
+<div class="cv-item">
+<strong>2001:</strong> BS in Biology, Amrit Science College, Tribhuvan University, Nepal
                     </div>
-                </div>
-
-                <div class="cv-section">
-                    <h3>Employment</h3>
-                    <div class="cv-item">
-                        <strong>Assistant Professor and Curator of the MUR herbarium (2023-current):</strong> Ball State University, Dept. of Biological Sciences
+</div>
+<div class="cv-section">
+<h3>Employment</h3>
+<div class="cv-item">
+<strong>Assistant Professor and Curator of the MUR herbarium (2023-current):</strong> Ball State University, Dept. of Biological Sciences
                     </div>
-                    <div class="cv-item">
-                        <strong>Assistant Professor and Curator of the MUR herbarium (2020-2023):</strong> Murray State University, Dept. of Biological Sciences
+<div class="cv-item">
+<strong>Assistant Professor and Curator of the MUR herbarium (2020-2023):</strong> Murray State University, Dept. of Biological Sciences
                     </div>
-                    <div class="cv-item">
-                        <strong>Postdoctoral Associate (2018-2020):</strong> Virginia Tech<br>
-                        Project: Morphological species delimitation of phylogenetically structured data<br>
+<div class="cv-item">
+<strong>Postdoctoral Associate (2018-2020):</strong> Virginia Tech<br/>
+                        Project: Morphological species delimitation of phylogenetically structured data<br/>
                         Advisor: Josef Uyeda
                     </div>
-                    <div class="cv-item">
-                        <strong>Postdoctoral Associate (2017-2018):</strong> University of Connecticut
+<div class="cv-item">
+<strong>Postdoctoral Associate (2017-2018):</strong> University of Connecticut
                     </div>
-                </div>
-
-                <div class="cv-section">
-                    <h3>Skills</h3>
-                    <p><strong>Programming/computational:</strong> Python, Phylogenetics methods, familiar with R and C++</p>
-                    <p><strong>Wet lab methods:</strong> DNA extraction, amplification, sequencing. Genome sequence assembly and annotation</p>
-                    <p><strong>Plant anatomical techniques:</strong> SEM, TEM</p>
-                </div>
-
-                <div class="cv-section">
-                    <h3>Languages</h3>
-                    <p>Nepalese (Native), English (Fluent), Hindi (Fluent)</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Contact Page -->
-        <div id="contact" class="page">
-            <div class="content-section">
-                <h2>Contact Information</h2>
-                <div class="contact-info">
-                    <p><strong>Department of Biology</strong><br>
-                    Foundational Sciences Building, Room 231<br>
-                    Ball State University<br>
+</div>
+<div class="cv-section">
+<h3>Skills</h3>
+<p><strong>Programming/computational:</strong> Python, Phylogenetics methods, familiar with R and C++</p>
+<p><strong>Wet lab methods:</strong> DNA extraction, amplification, sequencing. Genome sequence assembly and annotation</p>
+<p><strong>Plant anatomical techniques:</strong> SEM, TEM</p>
+</div>
+<div class="cv-section">
+<h3>Languages</h3>
+<p>Nepalese (Native), English (Fluent), Hindi (Fluent)</p>
+</div>
+</div>
+</div>
+<!-- Contact Page -->
+<div class="page" id="contact">
+<div class="content-section">
+<h2>Contact Information</h2>
+<div class="contact-info">
+<p><strong>Department of Biology</strong><br/>
+                    Foundational Sciences Building, Room 231<br/>
+                    Ball State University<br/>
                     Muncie, IN 47306 USA</p>
-                    
-                    <p>Email: [Your email address]<br>
+<p>Email: [Your email address]<br/>
                     Phone: [Your phone number]</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Tutorials Page -->
-        <div id="tutorials" class="page">
-            <div class="content-section">
-                <h2>Tutorials</h2>
-                <p>Here you'll find various tutorials and resources related to our research methods and techniques.</p>
-                
-                <h3>Available Tutorials</h3>
-                <ul class="tutorial-list">
-                    <li>Introduction to Phylogenetic Analysis</li>
-                    <li>DNA Sequence Alignment Basics</li>
-                    <li>Using R for Comparative Methods</li>
-                    <li>Plant Specimen Collection and Preservation</li>
-                </ul>
-                
-                <p>More tutorials coming soon!</p>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Suman Neupane. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script>
+</div>
+</div>
+</div>
+<!-- Tutorials Page -->
+<div class="page" id="tutorials">
+<div class="content-section">
+<h2>Tutorials</h2>
+<p>Here you'll find various tutorials and resources related to our research methods and techniques.</p>
+<h3>Available Tutorials</h3>
+<ul class="tutorial-list">
+<li>Introduction to Phylogenetic Analysis</li>
+<li>DNA Sequence Alignment Basics</li>
+<li>Using R for Comparative Methods</li>
+<li>Plant Specimen Collection and Preservation</li>
+</ul>
+<p>More tutorials coming soon!</p>
+</div>
+</div>
+</main>
+<footer>
+<div class="container">
+<p>© 2024 Suman Neupane. All rights reserved.</p>
+</div>
+</footer>
+<script>
         function showPage(pageName) {
             // Hide all pages
             const pages = document.querySelectorAll('.page');

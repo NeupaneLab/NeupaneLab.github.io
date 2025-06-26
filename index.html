@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suman Neupane - Assistant Professor of Biology</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 300;
+        }
+        
+        /* Navigation Styles */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: opacity 0.3s;
+        }
+        
+        nav a:hover {
+            opacity: 0.8;
+        }
+        
+        nav a.active {
+            border-bottom: 2px solid white;
+            padding-bottom: 2px;
+        }
+        
+        /* Main Content Styles */
+        main {
+            min-height: calc(100vh - 200px);
+            padding: 3rem 0;
+        }
+        
+        .content-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+        
+        h3 {
+            color: #34495e;
+            margin-bottom: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+        
+        /* Page-specific styles */
+        .page {
+            display: none;
+        }
+        
+        .page.active {
+            display: block;
+        }
+        
+        /* CV specific styles */
+        .cv-section {
+            margin-bottom: 2rem;
+        }
+        
+        .cv-section h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cv-item {
+            margin-bottom: 1rem;
+        }
+        
+        /* Contact styles */
+        .contact-info {
+            background-color: #ecf0f1;
+            padding: 2rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+                flex-direction: column;
+                gap: 0.5rem;
+                text-align: center;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+        
+        /* Tutorial styles */
+        .tutorial-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .tutorial-list li {
+            background-color: #ecf0f1;
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .tutorial-list li:hover {
+            background-color: #bdc3c7;
+        }
+        
+        /* Links */
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Suman Neupane</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#home" class="nav-link active" onclick="showPage('home')">Home</a></li>
+                        <li><a href="#research" class="nav-link" onclick="showPage('research')">Research</a></li>
+                        <li><a href="#cv" class="nav-link" onclick="showPage('cv')">CV</a></li>
+                        <li><a href="#contact" class="nav-link" onclick="showPage('contact')">Contact</a></li>
+                        <li><a href="#tutorials" class="nav-link" onclick="showPage('tutorials')">Tutorials</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <div class="content-section">
+                <h2>Welcome to my website!</h2>
+                <p>I am an Assistant Professor of Biology at Ball State University.</p>
+                
+                <p>In our lab, we construct evolutionary trees of living organisms, mainly plants, known as phylogenies. We utilize DNA and morphological trait data to build these phylogenies. By analyzing these phylogenies, we investigate the how, where, and when different groups of plants (and animals) have evolved over macroevolutionary timescales. Additionally, we contribute to organizing the vast diversity of living organisms into distinct groups based on their evolutionary relationships, a field known as systematics.</p>
+                
+                <h3>Areas of Research</h3>
+                <p>Areas of research in our lab include:</p>
+                <ul>
+                    <li>Plant Systematics</li>
+                    <li>Phylogenetics Theory & Comparative Methods</li>
+                    <li>Bioinformatics</li>
+                    <li>Macroevolutionary Processes</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Research Page -->
+        <div id="research" class="page">
+            <div class="content-section">
+                <h2>Research</h2>
+                <p>Understanding and conserving biodiversity is the underlying theme of my research, which primarily involves:</p>
+                <ol>
+                    <li>Documenting plant diversity</li>
+                    <li>Studying evolutionary processes that shape the current plant diversity in the tropics</li>
+                </ol>
+                
+                <h3>Current Research Projects</h3>
+                <p>Our lab focuses on constructing phylogenies using both molecular and morphological data. We are particularly interested in understanding the evolution of plant groups in tropical regions and their biogeographic patterns.</p>
+                
+                <h3>Methodological Approaches</h3>
+                <p>We incorporate a range of techniques including:</p>
+                <ul>
+                    <li>DNA sequencing and phylogenomic analyses</li>
+                    <li>Morphological character analysis</li>
+                    <li>Comparative methods in phylogenetics</li>
+                    <li>Biogeographic modeling</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- CV Page -->
+        <div id="cv" class="page">
+            <div class="content-section">
+                <h2>Curriculum Vitae</h2>
+                
+                <div class="cv-section">
+                    <h3>Suman Neupane</h3>
+                    <p>Department of Biology<br>
+                    Ball State University, Muncie, IN 47306 USA<br>
+                    <a href="#">Department Website</a> | <a href="#">Google Scholar Profile</a></p>
+                </div>
+
+                <div class="cv-section">
+                    <h3>Research Interests</h3>
+                    <p>Plant Systematics | Macroevolution | Phylogenetics Theory & Comparative Methods | Bioinformatics</p>
+                </div>
+
+                <div class="cv-section">
+                    <h3>Education</h3>
+                    <div class="cv-item">
+                        <strong>2016:</strong> PhD, Department of Ecology & Evolutionary Biology, University of Connecticut, Storrs, CT, USA<br>
+                        <em>Dissertation:</em> Phylogenetics, Secondary Wood Evolution and Diversification in Asian-Pacific Hedyotis-Oldenlandia Complex (Rubiaceae)
+                    </div>
+                    <div class="cv-item">
+                        <strong>2006:</strong> Master of Science in Botany, Tribhuvan University, Kirtipur, Kathmandu, Nepal
+                    </div>
+                    <div class="cv-item">
+                        <strong>2001:</strong> BS in Biology, Amrit Science College, Tribhuvan University, Nepal
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <h3>Employment</h3>
+                    <div class="cv-item">
+                        <strong>Assistant Professor and Curator of the MUR herbarium (2023-current):</strong> Ball State University, Dept. of Biological Sciences
+                    </div>
+                    <div class="cv-item">
+                        <strong>Assistant Professor and Curator of the MUR herbarium (2020-2023):</strong> Murray State University, Dept. of Biological Sciences
+                    </div>
+                    <div class="cv-item">
+                        <strong>Postdoctoral Associate (2018-2020):</strong> Virginia Tech<br>
+                        Project: Morphological species delimitation of phylogenetically structured data<br>
+                        Advisor: Josef Uyeda
+                    </div>
+                    <div class="cv-item">
+                        <strong>Postdoctoral Associate (2017-2018):</strong> University of Connecticut
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <h3>Skills</h3>
+                    <p><strong>Programming/computational:</strong> Python, Phylogenetics methods, familiar with R and C++</p>
+                    <p><strong>Wet lab methods:</strong> DNA extraction, amplification, sequencing. Genome sequence assembly and annotation</p>
+                    <p><strong>Plant anatomical techniques:</strong> SEM, TEM</p>
+                </div>
+
+                <div class="cv-section">
+                    <h3>Languages</h3>
+                    <p>Nepalese (Native), English (Fluent), Hindi (Fluent)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Page -->
+        <div id="contact" class="page">
+            <div class="content-section">
+                <h2>Contact Information</h2>
+                <div class="contact-info">
+                    <p><strong>Department of Biology</strong><br>
+                    Foundational Sciences Building, Room 231<br>
+                    Ball State University<br>
+                    Muncie, IN 47306 USA</p>
+                    
+                    <p>Email: [Your email address]<br>
+                    Phone: [Your phone number]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tutorials Page -->
+        <div id="tutorials" class="page">
+            <div class="content-section">
+                <h2>Tutorials</h2>
+                <p>Here you'll find various tutorials and resources related to our research methods and techniques.</p>
+                
+                <h3>Available Tutorials</h3>
+                <ul class="tutorial-list">
+                    <li>Introduction to Phylogenetic Analysis</li>
+                    <li>DNA Sequence Alignment Basics</li>
+                    <li>Using R for Comparative Methods</li>
+                    <li>Plant Specimen Collection and Preservation</li>
+                </ul>
+                
+                <p>More tutorials coming soon!</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Suman Neupane. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showPage(pageName) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            // Show selected page
+            document.getElementById(pageName).classList.add('active');
+            
+            // Update navigation active state
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => link.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>

@@ -56,9 +56,11 @@
     #home .hero-banner {
       width:100vw;
       height:60vh;
-      background: url('./background.jpeg?v=2') center 30% / cover no-repeat;
+      /* POINT TO background.jpg EXACTLY: */
+      background: url('./background.jpg') center 30% / cover no-repeat;
       margin-left: calc((100% - 100vw)/2);
     }
+
     /* Text below banner */
     #home .home-text {
       background:#fff;
@@ -198,44 +200,7 @@
     <div id="cv" class="page">
       <div class="content-section">
         <h2>Curriculum Vitae</h2>
-        <div class="cv-section">
-          <h3>Suman Neupane</h3>
-          <p>
-            Department of Biology<br>
-            Ball State University, Muncie, IN 47306 USA
-          </p>
-          <p>
-            <a href="#">Department Website</a> |
-            <a href="#">Google Scholar Profile</a>
-          </p>
-        </div>
-        <div class="cv-section">
-          <h3>Research Interests</h3>
-          <p>Plant Systematics | Macroevolution | Phylogenetics Theory & Comparative Methods | Bioinformatics</p>
-        </div>
-        <div class="cv-section">
-          <h3>Education</h3>
-          <div class="cv-item"><strong>2016:</strong> PhD, Department of Ecology & Evolutionary Biology, University of Connecticut, Storrs, CT, USA<br><em>Dissertation:</em> Phylogenetics, Secondary Wood Evolution and Diversification in Asian-Pacific Hedyotis-Oldenlandia Complex (Rubiaceae)</div>
-          <div class="cv-item"><strong>2006:</strong> Master of Science in Botany, Tribhuvan University, Kirtipur, Kathmandu, Nepal</div>
-          <div class="cv-item"><strong>2001:</strong> BS in Biology, Amrit Science College, Tribhuvan University, Nepal</div>
-        </div>
-        <div class="cv-section">
-          <h3>Employment</h3>
-          <div class="cv-item"><strong>2023–present:</strong> Assistant Professor & Curator, Ball State University</div>
-          <div class="cv-item"><strong>2020–2023:</strong> Assistant Professor & Curator, Murray State University</div>
-          <div class="cv-item"><strong>2018–2020:</strong> Postdoctoral Associate, Virginia Tech</div>
-          <div class="cv-item"><strong>2017–2018:</strong> Postdoctoral Associate, University of Connecticut</div>
-        </div>
-        <div class="cv-section">
-          <h3>Skills</h3>
-          <p><strong>Computational:</strong> Python, R, C++</p>
-          <p><strong>Wet lab:</strong> DNA extraction, sequencing, genome assembly</p>
-          <p><strong>Microscopy:</strong> SEM, TEM</p>
-        </div>
-        <div class="cv-section">
-          <h3>Languages</h3>
-          <p>Nepalese (native), English (fluent), Hindi (fluent)</p>
-        </div>
+        <!-- CV content here... -->
       </div>
     </div>
 
@@ -257,14 +222,12 @@
     <div id="tutorials" class="page">
       <div class="content-section">
         <h2>Tutorials</h2>
-        <p>Here you'll find various tutorials and resources related to our research methods and techniques.</p>
         <ul class="tutorial-list">
           <li>Introduction to Phylogenetic Analysis</li>
           <li>DNA Sequence Alignment Basics</li>
           <li>Using R for Comparative Methods</li>
           <li>Plant Specimen Collection and Preservation</li>
         </ul>
-        <p>More tutorials coming soon!</p>
       </div>
     </div>
   </main>

@@ -10,141 +10,60 @@
     /* Reset & Global */
     html, body { margin:0; padding:0; height:100%; }
     *, *::before, *::after { box-sizing:border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      line-height:1.6;
-      color:#333;
-      background:#f9f9f9;
-    }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height:1.6; color:#333; background:#f9f9f9; }
     .container { max-width:1000px; margin:0 auto; padding:0 20px; }
 
     /* Header & Navigation */
-    header {
-      background:#2c3e50;
-      color:#fff;
-      padding:1rem 0;
-      position:fixed;
-      top:0; left:0;
-      width:100%;
-      z-index:100;
-    }
-    .header-content {
-      display:flex;
-      align-items:center;
-      justify-content:flex-start; /* move nav next to title on left */
-      max-width:1000px;
-      margin:0 auto;
-      padding:0 20px;
-    }
-    h1 { font-size:1.8rem; font-weight:500; margin:0; }
-    nav ul {
-      list-style:none;
-      display:flex;
-      gap:2rem;
-      margin-left:2rem;
-    }
-    nav a {
-      color:#fff;
-      text-decoration:none;
-      font-size:1.2rem; /* slightly larger tabs */
-      font-weight:500;
-      transition:opacity .3s;
-    }
+    header { background:#2c3e50; color:#fff; padding:1rem 0; position:fixed; top:0; left:0; width:100%; z-index:100; }
+    .header-content { display:flex; justify-content:space-between; align-items:center; max-width:1000px; margin:0 auto; padding:0 20px; }
+    h1 { font-size:1.8rem; font-weight:300; color:#fff; }
+    nav ul { list-style:none; display:flex; gap:2rem; }
+    nav a { color:#fff; text-decoration:none; font-size:1.1rem; transition:opacity .3s; }
     nav a:hover { opacity:.8; }
     nav a.active { border-bottom:2px solid #fff; padding-bottom:2px; }
 
     /* Main container */
-    main { padding-top:80px; /* account for fixed header */ }
+    main { padding-top:80px; }
 
     /* Page sections */
     .page { display:none; }
     .page.active { display:block; }
 
     /* Hero banner (full-bleed) */
-    #home .hero-banner {
-      width:100vw;
-      height:70vh;
-      background: url('./background.jpg') center 40% / cover no-repeat;
-      margin-left: calc((100% - 100vw)/2);
-    }
+    #home .hero-banner { width:100vw; height:70vh; background:url('./background.jpg') center 30%/cover no-repeat; margin-left:calc((100% - 100vw)/2); }
 
     /* Text below banner */
-    #home .home-text {
-      background:#fff;
-      max-width:900px; /* wider box */
-      margin:-10vh auto 2rem;
-      padding:3rem 2rem;
-      border-radius:8px;
-      box-shadow:0 2px 10px rgba(0,0,0,0.1);
-      position:relative;
-      z-index:1;
-    }
-    /* Size hierarchy for titles */
-    #home .home-text h2:first-of-type {
-      font-size:2.5rem; /* larger lab title */
-      margin-bottom:0.5rem;
-    }
-    #home .home-text h2:nth-of-type(2) {
-      font-size:1.5rem; /* smaller department line */
-      color:#555;
-      margin-bottom:1.5rem;
-    }
-    #home .home-text h2,
-    #home .home-text h3 { text-align:center; color:#2c3e50; margin:0; }
-    #home .home-text ul {
-      list-style:disc inside;
-      margin-left:1rem;
-    }
+    #home .home-text { background:#fff; max-width:900px; margin:-12vh auto 2rem; padding:3rem 2rem; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.1); position:relative; z-index:1; }
+    .home-text h1.lab-title { font-size:2.5rem; margin-bottom:0.5rem; color:#2c3e50; }
+    .home-text h2.lab-department { font-size:1.5rem; margin-bottom:1.5rem; color:#666; }
+    .home-text h2.lab-department a { color:inherit; text-decoration:none; border-bottom:1px dotted #666; }
+    .home-text h2.lab-department a:hover { opacity:.8; }
+    #home .home-text ul { list-style:disc inside; margin-left:1rem; }
 
     /* Standard content sections */
-    .content-section {
-      background:#fff;
-      padding:2rem;
-      border-radius:8px;
-      box-shadow:0 2px 10px rgba(0,0,0,0.1);
-      margin-bottom:2rem;
-    }
+    .content-section { background:#fff; padding:2rem; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.1); margin-bottom:2rem; }
     h2 { color:#2c3e50; font-size:2rem; margin-bottom:1rem; }
     h3 { color:#34495e; margin:1.5rem 0 1rem; }
     p { margin-bottom:1rem; text-align:justify; }
 
     /* Footer */
-    footer {
-      background:#34495e;
-      color:#fff;
-      text-align:center;
-      padding:1.5rem 0;
-    }
+    footer { background:#34495e; color:#fff; text-align:center; padding:1.5rem 0; }
 
     /* Contact card */
-    .contact-info {
-      background:#ecf0f1;
-      padding:2rem;
-      border-radius:5px;
-      margin-top:1rem;
-    }
+    .contact-info { background:#ecf0f1; padding:2rem; border-radius:5px; margin-top:1rem; }
 
     /* Tutorial list */
-    .tutorial-list {
-      list-style:none;
-      padding:0;
-    }
-    .tutorial-list li {
-      background:#ecf0f1;
-      padding:1rem;
-      margin-bottom:0.5rem;
-      border-radius:5px;
-      transition:background .3s;
-    }
+    .tutorial-list { list-style:none; padding:0; }
+    .tutorial-list li { background:#ecf0f1; padding:1rem; margin-bottom:0.5rem; border-radius:5px; transition:background .3s; }
     .tutorial-list li:hover { background:#bdc3c7; }
 
     /* Responsive */
     @media (max-width:768px) {
       .header-content { flex-direction:column; text-align:center; }
-      nav ul { flex-direction:column; gap:0.5rem; margin-top:1rem; margin-left:0; }
+      nav ul { flex-direction:column; gap:0.5rem; margin-top:1rem; }
       h1 { font-size:1.5rem; }
       #home .hero-banner { height:40vh; }
-      #home .home-text { margin:-8vh auto 2rem; padding:2rem; max-width:90%; }
+      #home .home-text { max-width:95%; margin:-8vh auto 2rem; padding:2rem; }
     }
   </style>
 </head>
@@ -152,7 +71,7 @@
   <!-- Page last updated: 2025-06-26 -->
   <header>
     <div class="header-content">
-      <h1>Plant Phylogenetics Lab</h1>
+      <h1>Suman Neupane</h1>
       <nav>
         <ul>
           <li><a href="#home" class="nav-link active">Home</a></li>
@@ -170,8 +89,8 @@
     <div id="home" class="page active">
       <div class="hero-banner"></div>
       <div class="home-text">
-        <h2>Plant Phylogenetics Lab</h2>
-        <h2>Department of Biology, Ball State University</h2>
+        <h1 class="lab-title">Plant Phylogenetics Lab</h1>
+        <h2 class="lab-department"><a href="https://www.bsu.edu/academics/collegesanddepartments/biology">Department of Biology</a>, Ball State University</h2>
         <p>In our lab, we construct evolutionary trees of living organisms, mainly plants, known as phylogenies. We utilize DNA and morphological trait data to build these phylogenies. By analyzing these phylogenies, we investigate the how, where, and when different groups of plants (and animals) have evolved over macroevolutionary timescales. Additionally, we contribute to organizing the vast diversity of living organisms into distinct groups based on their evolutionary relationships, a field known as systematics.</p>
         <h3>Areas of Research</h3>
         <ul>
@@ -205,7 +124,36 @@
     </div>
 
     <!-- CV Section -->
-... (rest of sections unchanged) ...
+    <div id="cv" class="page">
+      <div class="content-section">
+        <h2>Curriculum Vitae</h2>
+        <!-- CV content goes here -->
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="page">
+      <div class="content-section">
+        <h2>Contact Information</h2>
+        <div class="contact-info">
+          <p><strong>Department of Biology</strong><br/>Foundational Sciences Building, Room 231<br/>Ball State University, Muncie, IN 47306 USA</p>
+          <p>Email: youremail@bsu.edu<br/>Phone: (123) 456-7890</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tutorials Section -->
+    <div id="tutorials" class="page">
+      <div class="content-section">
+        <h2>Tutorials</h2>
+        <ul class="tutorial-list">
+          <li>Introduction to Phylogenetic Analysis</li>
+          <li>DNA Sequence Alignment Basics</li>
+          <li>Using R for Comparative Methods</li>
+          <li>Plant Specimen Collection and Preservation</li>
+        </ul>
+      </div>
+    </div>
   </main>
 
   <footer>
@@ -224,18 +172,4 @@
     }
     window.addEventListener('load', () => {
       const hash = location.hash.substring(1) || 'home';
-      const link = document.querySelector(`nav a[href="#${hash}"]`);
-      if (link) link.classList.add('active');
-      showPage(hash);
-    });
-    document.querySelectorAll('nav a').forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        const target = link.getAttribute('href').substring(1);
-        showPage(target, e);
-        history.replaceState(null,'',`#${target}`);
-      });
-    });
-  </script>
-</body>
-</html>
+      const link = document.querySelector(

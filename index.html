@@ -26,53 +26,28 @@
       --header-height-mobile: 60px;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    /* Base Styles */
-    html {
-      scroll-behavior: smooth;
-      -webkit-text-size-adjust: 100%;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: hidden; }
     body {
       font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       line-height: 1.6;
       color: var(--text-color);
       background: var(--bg-light);
-      overflow-x: hidden;
     }
-
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
 
     /* Header & Navigation */
     header {
       background: var(--primary-color);
       color: var(--bg-white);
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
+      position: fixed; top: 0; left: 0; right: 0;
       height: var(--header-height);
+      z-index: 1000;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-
     .header-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 100%;
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      height: 100%; max-width: 1000px; margin: 0 auto; padding: 0 20px;
     }
 
     .site-title {
@@ -83,15 +58,12 @@
       text-decoration: none;
     }
 
-    /* Desktop Navigation */
     nav ul {
       list-style: none;
       display: flex;
       gap: 2rem;
-      margin: 0;
-      padding: 0;
+      margin: 0; padding: 0;
     }
-
     nav a {
       font-family: 'Space Mono', monospace;
       color: var(--bg-white);
@@ -101,81 +73,32 @@
       position: relative;
       transition: opacity 0.3s ease;
     }
-
     nav a::after {
       content: '';
       position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
+      bottom: 0; left: 0;
+      width: 0; height: 2px;
       background: var(--bg-white);
       transition: width 0.3s ease;
     }
-
     nav a:hover::after,
     nav a.active::after {
       width: 100%;
     }
 
     /* Mobile Menu Toggle */
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-      width: 30px;
-      height: 30px;
-      position: relative;
-    }
-
-    .menu-toggle span {
-      display: block;
-      width: 25px;
-      height: 3px;
-      background: var(--bg-white);
-      margin: 5px 0;
-      transition: all 0.3s ease;
-      border-radius: 2px;
-    }
-
-    .menu-toggle.active span:nth-child(1) {
-      transform: rotate(45deg) translate(7px, 7px);
-    }
-
-    .menu-toggle.active span:nth-child(2) {
-      opacity: 0;
-    }
-
-    .menu-toggle.active span:nth-child(3) {
-      transform: rotate(-45deg) translate(7px, -7px);
-    }
+    .menu-toggle { display: none; }
 
     /* Main Content */
-    main {
-      padding-top: var(--header-height);
-      min-height: calc(100vh - var(--header-height));
-    }
+    main { padding-top: var(--header-height); min-height: calc(100vh - var(--header-height)); }
 
-    /* Page Sections */
-    .page {
-      display: none;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .page.active {
-      display: block;
-      opacity: 1;
-    }
+    .page { display: none; opacity: 0; transition: opacity 0.3s ease; }
+    .page.active { display: block; opacity: 1; }
 
     /* Hero Banner */
     #home .hero-banner {
-      width: 100vw;
-      height: 70vh;
+      width: 100%; height: 70vh;
       background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('./background.jpg') center 30%/cover no-repeat;
-      margin-left: calc(-50vw + 50%);
       position: relative;
     }
 
@@ -190,14 +113,12 @@
       position: relative;
       z-index: 1;
     }
-
     .home-text h1.lab-title {
       font-family: 'Space Mono', monospace;
       font-size: clamp(1.8rem, 4vw, 2.5rem);
       margin-bottom: 0.5rem;
       color: var(--secondary-color);
     }
-
     .home-text h2.lab-department {
       font-family: 'Lato', sans-serif;
       font-weight: 300;
@@ -205,262 +126,52 @@
       margin-bottom: 1.5rem;
       color: var(--secondary-color);
     }
-
     .home-text h2.lab-department a {
       color: inherit;
       text-decoration: none;
       border-bottom: 1px dotted var(--secondary-color);
-      transition: opacity 0.3s ease;
     }
+    .home-text h2.lab-department a:hover { opacity: 0.8; }
+    #home .home-text ul { list-style: disc inside; margin-left: 1rem; }
 
-    .home-text h2.lab-department a:hover {
-      opacity: 0.8;
-    }
-
-    #home .home-text ul {
-      list-style: disc inside;
-      margin-left: 1rem;
-    }
-
-    /* Content Sections */
-    .content-section {
+    /* Updated Research Section */
+    #research .content-section {
       background: var(--bg-white);
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: var(--shadow);
+      padding: 2rem; border-radius: 8px; box-shadow: var(--shadow);
       margin-bottom: 2rem;
-      animation: fadeInUp 0.5s ease;
     }
+    #research h2 { font-family: 'Space Mono', monospace; color: #2c3e50; font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1rem; }
+    #research h3 { font-family: 'Lato', sans-serif; color: #34495e; margin: 1.5rem 0 1rem; font-size: clamp(1.1rem, 2.5vw, 1.3rem); }
 
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    h2 {
-      font-family: 'Space Mono', monospace;
-      color: #2c3e50;
-      font-size: clamp(1.5rem, 3vw, 2rem);
-      margin-bottom: 1rem;
-    }
-
-    h3 {
-      font-family: 'Lato', sans-serif;
-      color: #34495e;
-      margin: 1.5rem 0 1rem;
-      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
-    }
-
-    p {
-      margin-bottom: 1rem;
-      text-align: justify;
-      hyphens: auto;
-    }
-
-    /* Contact Info */
-    .contact-info {
-      background: #ecf0f1;
-      padding: 2rem;
-      border-radius: 5px;
-      margin-top: 1rem;
-    }
-
-    /* Tutorial List */
-    .tutorial-list {
-      list-style: none;
-      padding: 0;
-    }
-
-    .tutorial-list li {
-      background: #ecf0f1;
-      padding: 1rem;
-      margin-bottom: 0.5rem;
-      border-radius: 5px;
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-
-    .tutorial-list li:hover {
-      background: #bdc3c7;
-      transform: translateX(5px);
-    }
+    /* Research Focus List */
+    #research ul { list-style: disc inside; margin-left: 1rem; }
 
     /* Footer */
     footer {
-      background: #34495e;
-      color: var(--bg-white);
-      text-align: center;
-      padding: 1.5rem 0;
-      margin-top: auto;
+      background: #34495e; color: var(--bg-white); text-align: center;
+      padding: 1.5rem 0; margin-top: auto;
     }
 
-    /* Mobile Styles */
+    /* Responsive */
     @media (max-width: 768px) {
-      :root {
-        --header-height: var(--header-height-mobile);
-      }
-
-      /* Mobile Header */
-      header {
-        height: var(--header-height-mobile);
-      }
-
-      .site-title {
-        font-size: 1.2rem;
-      }
-
-      /* Show mobile menu toggle */
-      .menu-toggle {
-        display: block;
-      }
-
-      /* Mobile Navigation */
-      nav {
-        position: fixed;
-        top: var(--header-height-mobile);
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - var(--header-height-mobile));
-        background: var(--primary-color);
-        transition: left 0.3s ease;
-        overflow-y: auto;
-      }
-
-      nav.active {
-        left: 0;
-      }
-
-      nav ul {
-        flex-direction: column;
-        gap: 0;
-        padding: 2rem;
-      }
-
-      nav a {
-        display: block;
-        padding: 1rem 0;
-        font-size: 1.1rem;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-      }
-
-      nav a::after {
-        display: none;
-      }
-
-      nav a.active {
-        background: rgba(255,255,255,0.1);
-        padding-left: 1rem;
-        border-radius: 4px;
-      }
-
-      /* Mobile Hero */
-      #home .hero-banner {
-        height: 40vh;
-        background-position: center 40%;
-      }
-
-      /* Mobile Home Text */
-      #home .home-text {
-        max-width: calc(100% - 2rem);
-        margin: -8vh auto 1.5rem;
-        padding: 1.5rem;
-      }
-
-      /* Mobile Content */
-      .content-section {
-        padding: 1.5rem;
-        margin-bottom: 1rem;
-      }
-
-      p {
-        text-align: left;
-        hyphens: none;
-      }
+      header { height: var(--header-height-mobile); }
+      .site-title { font-size: 1.2rem; }
+      nav { position: fixed; top: var(--header-height-mobile); left: -100%; width: 100%; height: calc(100vh - var(--header-height-mobile)); background: var(--primary-color); transition: left 0.3s ease; overflow-y: auto; }
+      nav.active { left: 0; }
+      nav ul { flex-direction: column; padding: 2rem; }
+      nav a { display: block; padding: 1rem 0; font-size: 1.1rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+      #home .hero-banner { height: 40vh; background-position: center 40%; }
+      #home .home-text { max-width: calc(100% - 2rem); margin: -8vh auto 1.5rem; padding: 1.5rem; }
+      .content-section { padding: 1.5rem; margin-bottom: 1rem; }
+      p { text-align: left; hyphens: none; }
     }
 
-    /* Small Mobile Styles */
+    /* Small Mobile */
     @media (max-width: 480px) {
-      #home .hero-banner {
-        height: 30vh;
-      }
-
-      #home .home-text {
-        margin: -5vh auto 1rem;
-        padding: 1.2rem;
-      }
-
-      .home-text h1.lab-title {
-        font-size: 1.5rem;
-      }
-
-      .home-text h2.lab-department {
-        font-size: 1.1rem;
-      }
-    }
-
-    /* Tablet Styles */
-    @media (min-width: 769px) and (max-width: 1024px) {
-      nav ul {
-        gap: 1.5rem;
-      }
-
-      nav a {
-        font-size: 0.95rem;
-      }
-    }
-
-    /* Print Styles */
-    @media print {
-      header, footer, nav {
-        display: none;
-      }
-
-      main {
-        padding-top: 0;
-      }
-
-      .content-section {
-        box-shadow: none;
-        border: 1px solid #ddd;
-        page-break-inside: avoid;
-      }
-    }
-
-    /* Accessibility */
-    @media (prefers-reduced-motion: reduce) {
-      * {
-        animation: none !important;
-        transition: none !important;
-      }
-    }
-
-    /* Focus styles for keyboard navigation */
-    a:focus,
-    button:focus {
-      outline: 2px solid var(--secondary-color);
-      outline-offset: 2px;
-    }
-
-    /* Skip to main content link */
-    .skip-link {
-      position: absolute;
-      top: -40px;
-      left: 0;
-      background: var(--primary-color);
-      color: var(--bg-white);
-      padding: 8px;
-      text-decoration: none;
-      border-radius: 0 0 4px 0;
-    }
-
-    .skip-link:focus {
-      top: 0;
+      #home .hero-banner { height: 30vh; }
+      #home .home-text { margin: -5vh auto 1rem; padding: 1.2rem; }
+      .home-text h1.lab-title { font-size: 1.5rem; }
+      .home-text h2.lab-department { font-size: 1.1rem; }
     }
   </style>
 </head>
@@ -472,9 +183,7 @@
     <div class="header-content">
       <a href="#home" class="site-title">Suman Neupane</a>
       <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
       <nav id="main-nav" aria-label="Main navigation">
         <ul>
@@ -494,48 +203,55 @@
       <div class="hero-banner" role="img" aria-label="Plant phylogenetics laboratory banner"></div>
       <div class="home-text">
         <h1 class="lab-title">Plant Phylogenetics Lab</h1>
-        <h2 class="lab-department">
-          <a href="https://www.bsu.edu/academics/collegesanddepartments/biology" target="_blank" rel="noopener">Department of Biology</a>, Ball State University
-        </h2>
+        <h2 class="lab-department"><a href="https://www.bsu.edu/academics/collegesanddepartments/biology" target="_blank" rel="noopener">Department of Biology</a>, Ball State University</h2>
         <p>In our lab, we construct evolutionary trees of living organisms, mainly plants, known as phylogenies. We utilize DNA and morphological trait data to build these phylogenies. By analyzing these phylogenies, we investigate the how, where, and when different groups of plants (and animals) have evolved over macroevolutionary timescales. Additionally, we contribute to organizing the vast diversity of living organisms into distinct groups based on their evolutionary relationships, a field known as systematics.</p>
         <h3>Areas of Research</h3>
         <ul>
           <li>Plant Systematics</li>
-          <li>Phylogenetics Theory & Comparative Methods</li>
+          <li>Phylogenetics Theory &amp; Comparative Methods</li>
           <li>Bioinformatics</li>
           <li>Macroevolutionary Processes</li>
         </ul>
-      </div>
-    </section>
+      </section>
 
     <!-- Research Section -->
     <section id="research" class="page" aria-label="Research">
       <div class="content-section">
         <h2>Research</h2>
-        <p>Our research focuses on understanding the evolutionary relationships among plant species using molecular and morphological data. We employ cutting-edge computational methods to reconstruct phylogenetic trees and investigate patterns of diversification across different plant lineages.</p>
-        <h3>Current Projects</h3>
-        <p>We are currently working on several projects investigating the evolution of key plant traits and their correlation with environmental factors. Our work combines field collection, laboratory analysis, and computational biology to address fundamental questions in plant evolution.</p>
+        <p>My work centers around three major themes within the coffee family (<em>Rubiaceae</em>), particularly focusing on the tribe <em>Spermacoceae</em>.</p>
+
+        <h3>1. Systematics &amp; Phylogenetics of the Coffee Family</h3>
+        <p><em>Rubiaceae</em> is one of the world’s largest flowering-plant families (~13,000 species). Our lab investigates the pantropical tribe <em>Spermacoceae</em> (~1,000 spp., 60 genera), tackling its complex taxonomy by integrating nuclear and plastid DNA markers with detailed morphological datasets to produce a stable, global phylogeny.</p>
+
+        <h3>2. Macroevolutionary Processes</h3>
+        <p><em>Spermacoceae</em> provides an exceptional framework to test macroevolutionary hypotheses. We examine:</p>
+        <ul>
+          <li>Adaptive and insular radiations in Hawaiian <em>Kadua</em> and Pacific <em>Hedyotis</em>,</li>
+          <li>Evolution of secondary woodiness in montane clades,</li>
+          <li>Dynamics of heterostyly versus homostyly breeding systems,</li>
+          <li>Polyploidy &amp; hybridization events (e.g., in <em>Houstonia</em>),</li>
+          <li>Speciation mechanisms across tropical mountains and islands.</li>
+        </ul>
+
+        <h3>3. Phylogenomics &amp; Data Congruence</h3>
+        <p>Leveraging targeted sequence capture, we generate hundreds of nuclear loci to reconstruct species trees. We then evaluate gene-tree discordance and data combinability using both empirical and simulated datasets, refining best practices for robust phylogenomic inference.</p>
       </div>
     </section>
 
     <!-- CV Section -->
     <section id="cv" class="page" aria-label="Curriculum Vitae">
       <div class="content-section">
-        <h2>Curriculum Vitae</h2>
-        <p>Download my complete CV for detailed information about my academic background, research experience, publications, and professional activities.</p>
+        <h2>Curr</h2>
       </div>
-    </section>
+    </section>    
 
     <!-- Contact Section -->
     <section id="contact" class="page" aria-label="Contact">
       <div class="content-section">
         <h2>Contact Information</h2>
         <div class="contact-info">
-          <p><strong>Dr. Suman Neupane</strong></p>
-          <p>Department of Biology<br>
-          Ball State University<br>
-          Muncie, IN 47306</p>
-          <p>Email: [email protected]</p>
+          <p><strong>Dr. Suman Neupane</strong><br>Department of Biology<br>Ball State University<br>Muncie, IN 47306</p>
+          <p>Email: youremail@bsu.edu</p>
         </div>
       </div>
     </section>
@@ -544,7 +260,6 @@
     <section id="tutorials" class="page" aria-label="Tutorials">
       <div class="content-section">
         <h2>Tutorials</h2>
-        <p>Here you'll find tutorials and resources for phylogenetic analysis, bioinformatics tools, and computational methods used in our research.</p>
         <ul class="tutorial-list">
           <li>Introduction to Phylogenetic Analysis</li>
           <li>Working with DNA Sequence Data</li>
@@ -573,73 +288,35 @@
       menuToggle.setAttribute('aria-expanded', isActive);
     });
 
-    // Page navigation
     function showPage(pageName) {
-      // Hide all pages
-      document.querySelectorAll('.page').forEach(page => {
-        page.classList.remove('active');
-      });
-
-      // Show selected page
-      const selectedPage = document.getElementById(pageName);
-      if (selectedPage) {
-        selectedPage.classList.add('active');
-      }
-
-      // Update active nav link
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${pageName}`) {
-          link.classList.add('active');
-        }
-      });
-
-      // Close mobile menu
+      document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+      const selected = document.getElementById(pageName);
+      if (selected) selected.classList.add('active');
+      navLinks.forEach(link => link.classList.remove('active'));
+      const link = document.querySelector(`nav a[href="#${pageName}"]`);
+      if (link) link.classList.add('active');
       nav.classList.remove('active');
       menuToggle.classList.remove('active');
-      menuToggle.setAttribute('aria-expanded', 'false');
-
-      // Scroll to top
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      menuToggle.setAttribute('aria-expanded','false');
+      window.scrollTo({ top:0, behavior:'smooth' });
     }
 
-    // Handle navigation clicks
-    navLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const target = link.getAttribute('href').substring(1);
-        showPage(target);
-        history.pushState(null, '', `#${target}`);
-      });
-    });
+    navLinks.forEach(link => link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = link.getAttribute('href').substring(1);
+      showPage(target);
+      history.pushState(null,'',`#${target}`);
+    }));
 
-    // Handle browser back/forward
     window.addEventListener('popstate', () => {
       const hash = location.hash.substring(1) || 'home';
       showPage(hash);
     });
 
-    // Initialize on page load
     window.addEventListener('load', () => {
       const hash = location.hash.substring(1) || 'home';
       showPage(hash);
     });
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!nav.contains(e.target) && !menuToggle.contains(e.target) && nav.classList.contains('active')) {
-        nav.classList.remove('active');
-        menuToggle.classList.remove('active');
-        menuToggle.setAttribute('aria-expanded', 'false');
-      }
-    });
-
-    // Add loading state for images
-    const heroImage = new Image();
-    heroImage.src = './background.jpg';
-    heroImage.onload = () => {
-      document.querySelector('.hero-banner').style.opacity = '1';
-    };
   </script>
 </body>
 </html>

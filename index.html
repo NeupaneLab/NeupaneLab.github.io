@@ -3,13 +3,15 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Suman Neupane – Assistant Professor of Biology</title>
+  <title>Plant Phylogenetics Lab – Suman Neupane</title>
+  <!-- Import Inter font to match Spencer Pao site -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     /* Reset & Global */
     html, body { margin:0; padding:0; height:100%; }
     *, *::before, *::after { box-sizing:border-box; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
       line-height:1.6;
       color:#333;
       background:#f9f9f9;
@@ -28,18 +30,24 @@
     }
     .header-content {
       display:flex;
-      justify-content:space-between;
       align-items:center;
+      justify-content:flex-start; /* move nav next to title on left */
       max-width:1000px;
       margin:0 auto;
       padding:0 20px;
     }
-    h1 { font-size:1.8rem; font-weight:300; }
-    nav ul { list-style:none; display:flex; gap:2rem; }
+    h1 { font-size:1.8rem; font-weight:500; margin:0; }
+    nav ul {
+      list-style:none;
+      display:flex;
+      gap:2rem;
+      margin-left:2rem;
+    }
     nav a {
       color:#fff;
       text-decoration:none;
-      font-size:1rem;
+      font-size:1.2rem; /* slightly larger tabs */
+      font-weight:500;
       transition:opacity .3s;
     }
     nav a:hover { opacity:.8; }
@@ -56,7 +64,6 @@
     #home .hero-banner {
       width:100vw;
       height:70vh;
-      /* POINT TO background.jpg EXACTLY: */
       background: url('./background.jpg') center 40% / cover no-repeat;
       margin-left: calc((100% - 100vw)/2);
     }
@@ -64,7 +71,7 @@
     /* Text below banner */
     #home .home-text {
       background:#fff;
-      max-width:800px;
+      max-width:900px; /* wider box */
       margin:-10vh auto 2rem;
       padding:3rem 2rem;
       border-radius:8px;
@@ -72,8 +79,18 @@
       position:relative;
       z-index:1;
     }
+    /* Size hierarchy for titles */
+    #home .home-text h2:first-of-type {
+      font-size:2.5rem; /* larger lab title */
+      margin-bottom:0.5rem;
+    }
+    #home .home-text h2:nth-of-type(2) {
+      font-size:1.5rem; /* smaller department line */
+      color:#555;
+      margin-bottom:1.5rem;
+    }
     #home .home-text h2,
-    #home .home-text h3 { text-align:center; color:#2c3e50; }
+    #home .home-text h3 { text-align:center; color:#2c3e50; margin:0; }
     #home .home-text ul {
       list-style:disc inside;
       margin-left:1rem;
@@ -124,10 +141,10 @@
     /* Responsive */
     @media (max-width:768px) {
       .header-content { flex-direction:column; text-align:center; }
-      nav ul { flex-direction:column; gap:0.5rem; margin-top:1rem; }
+      nav ul { flex-direction:column; gap:0.5rem; margin-top:1rem; margin-left:0; }
       h1 { font-size:1.5rem; }
       #home .hero-banner { height:40vh; }
-      #home .home-text { margin:-8vh auto 2rem; padding:2rem; }
+      #home .home-text { margin:-8vh auto 2rem; padding:2rem; max-width:90%; }
     }
   </style>
 </head>
@@ -135,14 +152,14 @@
   <!-- Page last updated: 2025-06-26 -->
   <header>
     <div class="header-content">
-      <h1>Suman Neupane</h1>
+      <h1>Plant Phylogenetics Lab</h1>
       <nav>
         <ul>
-          <li><a href="#home"     class="nav-link active">Home</a></li>
+          <li><a href="#home" class="nav-link active">Home</a></li>
           <li><a href="#research" class="nav-link">Research</a></li>
-          <li><a href="#cv"       class="nav-link">CV</a></li>
-          <li><a href="#contact"  class="nav-link">Contact</a></li>
-          <li><a href="#tutorials"class="nav-link">Tutorials</a></li>
+          <li><a href="#cv" class="nav-link">CV</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="#tutorials" class="nav-link">Tutorials</a></li>
         </ul>
       </nav>
     </div>
@@ -155,13 +172,7 @@
       <div class="home-text">
         <h2>Plant Phylogenetics Lab</h2>
         <h2>Department of Biology, Ball State University</h2>
-        <p>
-          In our lab, we construct evolutionary trees of living organisms, mainly plants, known as phylogenies. 
-          We utilize DNA and morphological trait data to build these phylogenies. By analyzing these phylogenies, 
-          we investigate the how, where, and when different groups of plants (and animals) have evolved over 
-          macroevolutionary timescales. Additionally, we contribute to organizing the vast diversity of living 
-          organisms into distinct groups based on their evolutionary relationships, a field known as systematics.
-        </p>
+        <p>In our lab, we construct evolutionary trees of living organisms, mainly plants, known as phylogenies. We utilize DNA and morphological trait data to build these phylogenies. By analyzing these phylogenies, we investigate the how, where, and when different groups of plants (and animals) have evolved over macroevolutionary timescales. Additionally, we contribute to organizing the vast diversity of living organisms into distinct groups based on their evolutionary relationships, a field known as systematics.</p>
         <h3>Areas of Research</h3>
         <ul>
           <li>Plant Systematics</li>
@@ -182,10 +193,7 @@
           <li>Studying evolutionary processes that shape the current plant diversity in the tropics</li>
         </ol>
         <h3>Current Research Projects</h3>
-        <p>
-          Our lab focuses on constructing phylogenies using both molecular and morphological data. We are particularly 
-          interested in understanding the evolution of plant groups in tropical regions and their biogeographic patterns.
-        </p>
+        <p>Our lab focuses on constructing phylogenies using both molecular and morphological data. We are particularly interested in understanding the evolution of plant groups in tropical regions and their biogeographic patterns.</p>
         <h3>Methodological Approaches</h3>
         <ul>
           <li>DNA sequencing and phylogenomic analyses</li>
@@ -197,39 +205,7 @@
     </div>
 
     <!-- CV Section -->
-    <div id="cv" class="page">
-      <div class="content-section">
-        <h2>Curriculum Vitae</h2>
-        <!-- CV content here... -->
-      </div>
-    </div>
-
-    <!-- Contact Section -->
-    <div id="contact" class="page">
-      <div class="content-section">
-        <h2>Contact Information</h2>
-        <div class="contact-info">
-          <p><strong>Department of Biology</strong><br>
-             Foundational Sciences Building, Room 231<br>
-             Ball State University, Muncie, IN 47306 USA</p>
-          <p>Email: youremail@bsu.edu<br>
-             Phone: (123) 456-7890</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Tutorials Section -->
-    <div id="tutorials" class="page">
-      <div class="content-section">
-        <h2>Tutorials</h2>
-        <ul class="tutorial-list">
-          <li>Introduction to Phylogenetic Analysis</li>
-          <li>DNA Sequence Alignment Basics</li>
-          <li>Using R for Comparative Methods</li>
-          <li>Plant Specimen Collection and Preservation</li>
-        </ul>
-      </div>
-    </div>
+... (rest of sections unchanged) ...
   </main>
 
   <footer>

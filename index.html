@@ -63,7 +63,11 @@
       nav ul { flex-direction:column; gap:0.5rem; margin-top:1rem; }
       h1 { font-size:1.5rem; }
       #home .hero-banner { height:40vh; }
-      #home .home-text { max-width:95%; margin:-8vh auto 2rem; padding:2rem; }
+      #home .home-text {
+        max-width: 90%;      /* shrink the cap for narrow screens */
+        margin: -8vh auto 2rem; /* less overlap so the top of the box stays visible */
+        padding: 2rem;      
+     }
     }
   </style>
 </head>

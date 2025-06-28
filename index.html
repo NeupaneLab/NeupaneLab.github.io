@@ -142,8 +142,6 @@
     }
     #research h2 { font-family: 'Space Mono', monospace; color: #2c3e50; font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1rem; }
     #research h3 { font-family: 'Lato', sans-serif; color: #34495e; margin: 1.5rem 0 1rem; font-size: clamp(1.1rem, 2.5vw, 1.3rem); }
-
-    /* Research Focus List */
     #research ul { list-style: disc inside; margin-left: 1rem; }
 
     /* Footer */
@@ -176,7 +174,6 @@
   </style>
 </head>
 <body>
-  <!-- Skip to main content for accessibility -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <header>
@@ -212,38 +209,37 @@
           <li>Bioinformatics</li>
           <li>Macroevolutionary Processes</li>
         </ul>
-      </section>
+      </div>
+    </section>
 
     <!-- Research Section -->
     <section id="research" class="page" aria-label="Research">
       <div class="content-section">
-        <h2>Research</h2>
-        <p>My work centers around three major themes within the coffee family (<em>Rubiaceae</em>), particularly focusing on the tribe <em>Spermacoceae</em>.</p>
-
-        <h3>1. Systematics &amp; Phylogenetics of the Coffee Family</h3>
-        <p><em>Rubiaceae</em> is one of the world’s largest flowering-plant families (~13,000 species). Our lab investigates the pantropical tribe <em>Spermacoceae</em> (~1,000 spp., 60 genera), tackling its complex taxonomy by integrating nuclear and plastid DNA markers with detailed morphological datasets to produce a stable, global phylogeny.</p>
-
-        <h3>2. Macroevolutionary Processes</h3>
-        <p><em>Spermacoceae</em> provides an exceptional framework to test macroevolutionary hypotheses. We examine:</p>
+        <h2>Macroevolutionary Dynamics and Speciation in Tropical Plants</h2>
+        <p>The extraordinary diversity of angiosperms worldwide reflects macroevolutionary processes unfolding over deep time, generating both broad distributions and extreme endemism. These forces—most intense in tropical mountains and islands—produce novel traits, reproductive strategies, and ultimately new species. Our lab uses the pantropical tribe <em>Spermacoceae</em> (~1,500 spp.) as a model system to investigate how trait evolution, breeding-system shifts, and genomic change interact to generate biodiversity. We integrate field, phylogenetic, and genomic approaches to elucidate how microevolutionary mechanisms scale up to macroevolutionary patterns.</p>
+        <h3>Trait Lability, Polyploidy, and the Genomics of Speciation</h3>
+        <p>Speciation is a multi-level process shaped by the interplay of reproductive-system evolution, hybridization, and genomic divergence across space and time. <em>Spermacoceae</em> exemplifies exceptional trait lability:</p>
         <ul>
-          <li>Adaptive and insular radiations in Hawaiian <em>Kadua</em> and Pacific <em>Hedyotis</em>,</li>
-          <li>Evolution of secondary woodiness in montane clades,</li>
-          <li>Dynamics of heterostyly versus homostyly breeding systems,</li>
-          <li>Polyploidy &amp; hybridization events (e.g., in <em>Houstonia</em>),</li>
-          <li>Speciation mechanisms across tropical mountains and islands.</li>
+          <li><strong>Breeding-system diversity.</strong> Heterostyly occurs without clear phylogenetic signal: diploid <em>Houstonia caerulea</em> is distylous (heterostylous), whereas its sister species <em>H. pusilla</em> is homostylous and largely self-fertile. Island radiations show even more extreme shifts—“leaky dioecy” in Hawaiian <em>Kadua</em> and South-Atlantic <em>Nesohedyotis</em>.</li>
+          <li><strong>Growth-form transitions.</strong> Although ancestrally herbaceous, <em>Spermacoceae</em> has independently evolved woodiness multiple times—especially in <em>Hedyotis</em>, <em>Kadua</em>, and <em>Arcytophyllum</em>. Neupane et al. (2017) link these woody shifts to colonization of montane and insular habitats, where woody forms often dominate.</li>
+          <li><strong>Morphological lability.</strong> Frequent changes in fruit dehiscence, seed morphology, and pollen traits blur taxonomic boundaries and complicate genus-level delimitation.</li>
+          <li><strong>Polyploidy &amp; hybridization.</strong> Polyploidy is pervasive—particularly in eastern North American <em>Houstonia</em>. Church &amp; Taylor (2005) showed genome duplication breaks down diploid reproductive barriers, enabling hybridization; Glennon &amp; Church (2015) found that tetraploids harbor greater genetic diversity and exchange genes largely with other tetraploids. Together, breeding-system shifts, morphological flexibility, and polyploidy forge a dynamic mosaic of reproductive barriers.</li>
         </ul>
-
-        <h3>3. Phylogenomics &amp; Data Congruence</h3>
-        <p>Leveraging targeted sequence capture, we generate hundreds of nuclear loci to reconstruct species trees. We then evaluate gene-tree discordance and data combinability using both empirical and simulated datasets, refining best practices for robust phylogenomic inference.</p>
+        <p>Hybridization can either homogenize lineages through ongoing gene flow or, via adaptive introgression and allopolyploidy, accelerate divergence and spawn novel hybrid taxa. Which outcome prevails depends on selection pressures, recombination patterns, and the genomic architecture of barrier loci—all of which vary across landscapes and through time.</p>
+        <h2>Taxonomic Challenges in Spermacoceae</h2>
+        <p>The high degree of morphological polymorphism and homoplasy in <em>Spermacoceae</em> has made generic delimitation particularly challenging. Historically, taxonomic confusion arose from overlapping morphological traits, leading to disagreements dating back to Linnaeus, who first described many genera (e.g., <em>Diodia</em>, <em>Hedyotis</em>, <em>Houstonia</em>). Phylogenetic studies (Kårehed et al. 2008; Groeninckx et al. 2009) have revealed polyphyly in large genera such as <em>Borreria</em>, <em>Diodia</em>, <em>Hedyotis</em>, and <em>Spermacoce</em>, prompting splits into monophyletic groups and leaving others unresolved. Our lab collaborates with taxonomists from Argentina and Belgium to resolve these issues.</p>
+        <h2>Phylogenomic Congruence &amp; Data Discordance</h2>
+        <p>Reconstructing a reliable species tree can be challenging due to discordance among gene trees caused by stochastic error (e.g., sampling artifacts) or systematic error (e.g., deep coalescence/incomplete lineage sorting). With large-scale genomic data, incongruence can intensify. While new species-tree methods are emerging, it is essential to assess discordance and its sources before interpretation. Our work examines DNA-data combinability (targeted regions vs. whole genomes), phylogenetic information content, taxon sampling, and missing data effects under a Bayesian framework. We use Bayes factors (via marginal likelihoods) on simulated and empirical datasets to detect phylogenomic congruence and inform best practices for robust tree inference.</p>
       </div>
     </section>
 
     <!-- CV Section -->
     <section id="cv" class="page" aria-label="Curriculum Vitae">
       <div class="content-section">
-        <h2>Curr</h2>
+        <h2>Curriculum Vitae</h2>
+        <p>Download my complete CV for detailed information about my academic background, research experience, publications, and professional activities.</p>
       </div>
-    </section>    
+    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="page" aria-label="Contact">
@@ -317,6 +313,6 @@
       const hash = location.hash.substring(1) || 'home';
       showPage(hash);
     });
-  </script>
+  <**script**>
 </body>
 </html>

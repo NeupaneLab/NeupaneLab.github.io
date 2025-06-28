@@ -14,7 +14,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Montserrat:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   
   <style>
-    /* CSS Reset & Variables */
     :root {
       --primary-color: #496957;
       --secondary-color: #5C8A72;
@@ -25,156 +24,147 @@
       --header-height: 70px;
       --header-height-mobile: 60px;
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: hidden; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; overflow-x:hidden; }
     body {
-      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      line-height: 1.6;
-      color: var(--text-color);
-      background: var(--bg-light);
+      font-family:'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height:1.6;
+      color:var(--text-color);
+      background:var(--bg-light);
     }
-    .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+    .container { max-width:1000px; margin:0 auto; padding:0 20px; }
 
-    /* Header & Navigation */
+    /* Header */
     header {
-      background: var(--primary-color);
-      color: var(--bg-white);
-      position: fixed; top: 0; left: 0; right: 0;
-      height: var(--header-height);
-      z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background:var(--primary-color);
+      color:var(--bg-white);
+      position:fixed; top:0; left:0; right:0;
+      height:var(--header-height);
+      box-shadow:0 2px 5px rgba(0,0,0,0.1);
+      z-index:1000;
     }
     .header-content {
-      display: flex; justify-content: space-between; align-items: center;
-      height: 100%; max-width: 1000px; margin: 0 auto; padding: 0 20px;
+      display:flex; justify-content:space-between; align-items:center;
+      height:100%; max-width:1000px; margin:0 auto; padding:0 20px;
     }
     .site-title {
-      font-family: 'Space Mono', monospace;
-      font-size: 1.5rem;
-      font-weight: 400;
-      color: var(--bg-white);
-      text-decoration: none;
+      font-family:'Space Mono', monospace;
+      font-size:1.5rem;
+      color:var(--bg-white);
+      text-decoration:none;
     }
     nav ul {
-      list-style: none;
-      display: flex;
-      gap: 2rem;
+      list-style:none;
+      display:flex;
+      gap:2rem;
     }
     nav a {
-      font-family: 'Space Mono', monospace;
-      color: var(--bg-white);
-      text-decoration: none;
-      font-size: 1rem;
-      padding: 0.5rem 0;
-      position: relative;
-      transition: opacity 0.3s ease;
+      font-family:'Space Mono', monospace;
+      color:var(--bg-white);
+      text-decoration:none;
+      font-size:1rem;
+      padding:0.5rem 0;
+      position:relative;
+      transition:opacity .3s;
     }
     nav a::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0;
-      width: 0; height: 2px;
-      background: var(--bg-white);
-      transition: width 0.3s ease;
+      content:''; position:absolute; bottom:0; left:0;
+      width:0; height:2px; background:var(--bg-white);
+      transition:width .3s;
     }
     nav a:hover::after,
-    nav a.active::after {
-      width: 100%;
-    }
+    nav a.active::after { width:100%; }
 
-    /* Main Content */
-    main { padding-top: var(--header-height); min-height: calc(100vh - var(--header-height)); }
-    .page { display: none; opacity: 0; transition: opacity 0.3s ease; }
-    .page.active { display: block; opacity: 1; }
+    /* Main & Pages */
+    main { padding-top:var(--header-height); min-height:calc(100vh - var(--header-height)); }
+    .page { display:none; opacity:0; transition:opacity .3s; }
+    .page.active { display:block; opacity:1; }
 
-    /* Hero Banner */
+    /* Hero */
     #home .hero-banner {
-      width: 100%; height: 70vh;
-      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('./background.jpg') center 30%/cover no-repeat;
+      width:100%; height:70vh;
+      background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('./background.jpg') center 30%/cover no-repeat;
     }
 
     /* Home Text */
     #home .home-text {
-      background: var(--bg-white);
-      max-width: 1200px;
-      margin: -10vh auto 2rem;
-      padding: 3rem;
-      border-radius: 8px;
-      box-shadow: var(--shadow);
-      position: relative; z-index: 1;
+      background:var(--bg-white);
+      max-width:1200px;
+      margin:-10vh auto 2rem;
+      padding:3rem;
+      border-radius:8px;
+      box-shadow:var(--shadow);
+      position:relative; z-index:1;
     }
     .home-text h1.lab-title {
-      font-family: 'Space Mono', monospace;
-      font-size: clamp(1.8rem, 4vw, 2.5rem);
-      margin-bottom: 0.5rem;
-      color: var(--secondary-color);
+      font-family:'Space Mono', monospace;
+      font-size:clamp(1.8rem,4vw,2.5rem);
+      margin-bottom:.5rem;
+      color:var(--secondary-color);
     }
     .home-text h2.lab-department {
-      font-family: 'Lato', sans-serif;
-      font-weight: 300;
-      font-size: clamp(1.2rem, 3vw, 1.5rem);
-      margin-bottom: 1.5rem;
-      color: var(--secondary-color);
+      font-family:'Lato',sans-serif;
+      font-weight:300;
+      font-size:clamp(1.2rem,3vw,1.5rem);
+      margin-bottom:1.5rem;
+      color:var(--secondary-color);
     }
     .home-text h2.lab-department a {
-      color: inherit;
-      text-decoration: none;
-      border-bottom: 1px dotted var(--secondary-color);
+      color:inherit; text-decoration:none;
+      border-bottom:1px dotted var(--secondary-color);
     }
 
     /* Content Sections */
     .content-section {
-      background: var(--bg-white);
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: var(--shadow);
-      margin-bottom: 2rem;
+      background:var(--bg-white);
+      padding:2rem;
+      border-radius:8px;
+      box-shadow:var(--shadow);
+      margin-bottom:2rem;
     }
     h2 {
-      font-family: 'Space Mono', monospace;
-      color: #2c3e50;
-      font-size: clamp(1.5rem, 3vw, 2rem);
-      margin-bottom: 1rem;
+      font-family:'Space Mono',monospace;
+      color:#2c3e50;
+      font-size:clamp(1.5rem,3vw,2rem);
+      margin-bottom:1rem;
     }
     h3 {
-      font-family: 'Lato', sans-serif;
-      color: #34495e;
-      margin: 1.5rem 0 1rem;
-      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+      font-family:'Lato',sans-serif;
+      color:#34495e;
+      font-size:clamp(1.1rem,2.5vw,1.3rem);
+      margin:1.5rem 0 1rem;
     }
-    ul { list-style: disc inside; margin-left: 1rem; }
+    ul { list-style:disc inside; margin-left:1rem; }
 
     /* Footer */
     footer {
-      background: #34495e;
-      color: var(--bg-white);
-      text-align: center;
-      padding: 1.5rem 0;
-      margin-top: auto;
+      background:#34495e;
+      color:var(--bg-white);
+      text-align:center;
+      padding:1.5rem 0;
+      margin-top:auto;
     }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      header { height: var(--header-height-mobile); }
-      nav { position: fixed; top: var(--header-height-mobile); left: -100%; width: 100%; height: calc(100vh - var(--header-height-mobile)); background: var(--primary-color); transition: left 0.3s ease; overflow-y: auto; }
-      nav.active { left: 0; }
-      nav ul { flex-direction: column; padding: 2rem; }
-      nav a { display: block; padding: 1rem 0; font-size: 1.1rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
-      #home .hero-banner { height: 40vh; background-position: center 40%; }
-      #home .home-text { max-width: calc(100% - 2rem); margin: -8vh auto 1.5rem; padding: 1.5rem; }
-      .content-section { padding: 1.5rem; margin-bottom: 1rem; }
-      p { text-align: left; hyphens: none; }
+    /* Mobile */
+    @media (max-width:768px) {
+      header { height:var(--header-height-mobile); }
+      nav { position:fixed; top:var(--header-height-mobile); left:-100%; width:100%; height:calc(100vh - var(--header-height-mobile)); background:var(--primary-color); transition:left .3s; overflow-y:auto; }
+      nav.active { left:0; }
+      nav ul { flex-direction:column; padding:2rem; }
+      nav a { display:block; padding:1rem 0; font-size:1.1rem; border-bottom:1px solid rgba(255,255,255,0.1); }
+      #home .hero-banner { height:40vh; background-position:center 40%; }
+      #home .home-text { max-width:calc(100% - 2rem); margin:-8vh auto 1.5rem; padding:1.5rem; }
+      .content-section { padding:1.5rem; margin-bottom:1rem; }
     }
-    @media (max-width: 480px) {
-      #home .hero-banner { height: 30vh; }
-      #home .home-text { margin: -5vh auto 1rem; padding: 1.2rem; }
-      .home-text h1.lab-title { font-size: 1.5rem; }
-      .home-text h2.lab-department { font-size: 1.1rem; }
+    @media (max-width:480px) {
+      #home .hero-banner { height:30vh; }
+      #home .home-text { margin:-5vh auto 1rem; padding:1.2rem; }
+      .home-text h1.lab-title { font-size:1.5rem; }
+      .home-text h2.lab-department { font-size:1.1rem; }
     }
   </style>
 </head>
 <body>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
   <header>
     <div class="header-content">
       <a href="#home" class="site-title">Suman Neupane</a>
@@ -183,20 +173,20 @@
       </button>
       <nav id="main-nav" aria-label="Main navigation">
         <ul>
-          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#home"     class="nav-link active">Home</a></li>
           <li><a href="#research" class="nav-link">Research</a></li>
-          <li><a href="#cv" class="nav-link">CV</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-          <li><a href="#tutorials" class="nav-link">Tutorials</a></li>
+          <li><a href="#cv"       class="nav-link">CV</a></li>
+          <li><a href="#contact"  class="nav-link">Contact</a></li>
+          <li><a href="#tutorials"class="nav-link">Tutorials</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="main-content" class="container">
-    <!-- Home Section -->
+  <main class="container">
+    <!-- Home -->
     <section id="home" class="page active" aria-label="Home">
-      <div class="hero-banner" role="img" aria-label="Plant phylogenetics laboratory banner"></div>
+      <div class="hero-banner" role="img" aria-label="Plant lab banner"></div>
       <div class="home-text">
         <h1 class="lab-title">Plant Phylogenetics Lab</h1>
         <h2 class="lab-department">
@@ -204,18 +194,138 @@
             Department of Biology
           </a>, Ball State University
         </h2>
-        <p>In our lab, we construct evolutionary trees of living organisms, mainly plants, known as phylogenies. We utilize DNA and morphological trait data to build these phylogenies. By analyzing these phylogenies, we investigate how and when different groups of plants (and animals) have evolved over macroevolutionary timescales. Additionally, we contribute to organizing the vast diversity of living organisms into distinct groups based on their evolutionary relationships, a field known as systematics.</p>
+        <p>In our lab, we construct evolutionary trees…</p>
       </div>
     </section>
 
-    <!-- Research Section -->
+    <!-- Research -->
     <section id="research" class="page" aria-label="Research">
       <div class="content-section">
         <h2>1. Macroevolutionary Dynamics and Speciation in Tropical Plants</h2>
-        <p>The extraordinary diversity of angiosperms worldwide reflects macroevolutionary processes unfolding over deep time, generating both broad distributions and extreme endemism. These forces—most intense in tropical mountains and islands—produce novel traits, reproductive strategies, and ultimately new species. Our lab uses the pantropical tribe <em>Spermacoceae</em> (~1,500 spp.) as a model system to investigate how trait evolution, breeding-system shifts, and genomic change interact to generate biodiversity. We integrate field, phylogenetic, and genomic approaches to reveal how microevolutionary mechanisms scale up to macroevolutionary patterns.</p>
+        <p>
+          The extraordinary diversity of angiosperms worldwide reflects macroevolutionary processes unfolding over deep time, generating both broad distributions and extreme endemism. These forces—most intense in tropical mountains and islands—produce novel traits, reproductive strategies, and ultimately new species. Our lab uses the pantropical tribe <em>Spermacoceae</em> (~1,500 spp.) as a model system to investigate how trait evolution, breeding-system shifts, and genomic change interact to generate biodiversity. We integrate field, phylogenetic, and genomic approaches to reveal how microevolutionary mechanisms scale up to macroevolutionary patterns.
+        </p>
         <hr>
         <h3>Trait Lability, Polyploidy, and the Genomics of Speciation</h3>
-        <p>Speciation is a multi-level process shaped by the interplay of reproductive-system evolution, hybridization, and genomic divergence across space and time. <em>Spermacoceae</em> exemplifies exceptional trait lability:</p>
+        <p>
+          Speciation is a multi-level process shaped by the interplay of reproductive-system evolution, hybridization, and genomic divergence across space and time. <em>Spermacoceae</em> exemplifies exceptional trait lability:
+        </p>
         <ul>
-          <li><strong>Breeding-system diversity.</strong> Heterostyly occurs without clear phylogenetic signal: diploid <em>Houstonia caerulea</em> is distylous (heterostylous), whereas its sister species <em>H. pusilla</em> is homostylous and largely self-ertil…
-``` (truncated due to length)
+          <li><strong>Breeding-system diversity.</strong> Heterostyly occurs without clear phylogenetic signal: diploid <em>Houstonia caerulea</em> is distylous (heterostylous), whereas its sister species <em>H. pusilla</em> is homostylous and largely self-fertile. Island radiations show even more extreme shifts—“leaky dioecy” in Hawaiian <em>Kadua</em> and South-Atlantic <em>Nesohedyotis</em>.</li>
+          <li><strong>Growth-form transitions.</strong> Although ancestrally herbaceous, <em>Spermacoceae</em> has independently evolved woodiness multiple times—especially in <em>Hedyotis</em>, <em>Kadua</em>, and <em>Arcytophyllum</em>. Neupane et al. (2017) link these woody shifts to colonization of montane and insular habitats, where woody forms often dominate.</li>
+          <li><strong>Morphological lability.</strong> Frequent changes in fruit dehiscence, seed morphology, and pollen traits blur taxonomic boundaries and complicate genus-level delimitation.</li>
+          <li><strong>Polyploidy & hybridization.</strong> Polyploidy is pervasive—particularly in eastern North-American <em>Houstonia</em>. Church & Taylor (2005) showed genome duplication breaks down diploid reproductive barriers, enabling hybridization; Glennon & Church (2015) found that tetraploids harbor greater genetic diversity and exchange genes largely with other tetraploids. Together, breeding-system shifts, morphological flexibility, and polyploidy forge a dynamic mosaic of reproductive barriers.</li>
+        </ul>
+        <p>
+          Hybridization can either homogenize lineages through ongoing gene flow or, via adaptive introgression and allopolyploidy, accelerate divergence and spawn novel hybrid taxa. Which outcome prevails depends on selection pressures, recombination patterns, and the genomic architecture of barrier loci—all of which vary across landscapes and through time.
+        </p>
+        <hr>
+        <h3>Our Current Research Questions</h3>
+        <ul>
+          <li><strong>Geographic patterns of trait evolution</strong><br>
+            How do breeding-system transitions (heterostyly, homostyly, dioecy), hybridization, and polyploidy differ between island and continental <em>Spermacoceae</em>?
+          </li>
+          <li><strong>Polyploid evolution in the Houstonia–Stenaria complex</strong><br>
+            What is the frequency and evolutionary impact of polyploidy and hybridization events? Do multiple, independent polyploidization events contribute to genetic diversity?
+          </li>
+          <li><strong>Genomic mechanisms of speciation</strong><br>
+            In hyperdiverse, narrowly endemic clades like <em>Hedyotis</em> (~180 spp.) and <em>Kadua</em> (29 spp.), is speciation driven mainly by adaptive radiation in insular or montane settings, or by reticulate processes (hybridization and polyploidy) as in <em>Houstonia</em>? Do genomic signatures point to reinforcement, adaptive introgression, or hybrid speciation as the dominant processes?
+          </li>
+          <li><strong>Evolution of woodiness</strong><br>
+            What genomic changes underlie repeated herbaceous-to-woody transitions in montane <em>Hedyotis</em>, and how do they correlate with diversification?
+          </li>
+          <li><strong>Macroevolutionary correlates</strong><br>
+            Which traits—derived woodiness, breeding-system diversity, or polyploidy—best predict elevated diversification rates across the tribe?
+          </li>
+        </ul>
+        <p>
+          By combining fieldwork, phylogenomics, population genomics, comparative transcriptomics, and macroevolutionary modeling, we aim to unravel how micro- and macroevolutionary processes interact to shape the spectacular diversity of tropical, insular, and continental plant lineages.
+        </p>
+      </div>
+    </section>
+
+    <!-- CV -->
+    <section id="cv" class="page" aria-label="Curriculum Vitae">
+      <div class="content-section">
+        <h2>Curriculum Vitae</h2>
+        <p>Download my complete CV for detailed information about my academic background, research experience, publications, and professional activities.</p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="page" aria-label="Contact">
+      <div class="content-section">
+        <h2>Contact Information</h2>
+        <p><strong>Dr. Suman Neupane</strong><br>
+        Department of Biology<br>
+        Ball State University<br>
+        Muncie, IN 47306</p>
+        <p>Email: youremail@bsu.edu</p>
+      </div>
+    </section>
+
+    <!-- Tutorials -->
+    <section id="tutorials" class="page" aria-label="Tutorials">
+      <div class="content-section">
+        <h2>Tutorials</h2>
+        <ul class="tutorial-list">
+          <li>Introduction to Phylogenetic Analysis</li>
+          <li>Working with DNA Sequence Data</li>
+          <li>Tree Building Methods</li>
+          <li>Comparative Methods in R</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Suman Neupane. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.getElementById('main-nav');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    menuToggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+      menuToggle.setAttribute('aria-expanded', open);
+    });
+
+    function showPage(page) {
+      document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+      const sel = document.getElementById(page);
+      if(sel) sel.classList.add('active');
+      navLinks.forEach(a=>a.classList.remove('active'));
+      const cur = document.querySelector(`nav a[href="#${page}"]`);
+      if(cur) cur.classList.add('active');
+      nav.classList.remove('active');
+      menuToggle.classList.remove('active');
+      menuToggle.setAttribute('aria-expanded','false');
+      window.scrollTo({ top:0, behavior:'smooth' });
+    }
+
+    navLinks.forEach(link=>{
+      link.addEventListener('click',e=>{
+        e.preventDefault();
+        const tgt=link.getAttribute('href').substring(1);
+        showPage(tgt);
+        history.pushState(null,'',`#${tgt}`);
+      });
+    });
+
+    window.addEventListener('popstate',()=>{
+      const h=location.hash.substring(1)||'home';
+      showPage(h);
+    });
+    window.addEventListener('load',()=>{
+      const h=location.hash.substring(1)||'home';
+      showPage(h);
+    });
+  </script>
+</body>
+</html>

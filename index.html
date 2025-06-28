@@ -25,7 +25,6 @@
       --header-height: 70px;
       --header-height-mobile: 60px;
     }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: hidden; }
     body {
@@ -49,7 +48,6 @@
       display: flex; justify-content: space-between; align-items: center;
       height: 100%; max-width: 1000px; margin: 0 auto; padding: 0 20px;
     }
-
     .site-title {
       font-family: 'Space Mono', monospace;
       font-size: 1.5rem;
@@ -57,12 +55,10 @@
       color: var(--bg-white);
       text-decoration: none;
     }
-
     nav ul {
       list-style: none;
       display: flex;
       gap: 2rem;
-      margin: 0; padding: 0;
     }
     nav a {
       font-family: 'Space Mono', monospace;
@@ -88,7 +84,6 @@
 
     /* Main Content */
     main { padding-top: var(--header-height); min-height: calc(100vh - var(--header-height)); }
-
     .page { display: none; opacity: 0; transition: opacity 0.3s ease; }
     .page.active { display: block; opacity: 1; }
 
@@ -96,10 +91,9 @@
     #home .hero-banner {
       width: 100%; height: 70vh;
       background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('./background.jpg') center 30%/cover no-repeat;
-      position: relative;
     }
 
-    /* Home Text Section */
+    /* Home Text */
     #home .home-text {
       background: var(--bg-white);
       max-width: 1200px;
@@ -107,8 +101,7 @@
       padding: 3rem;
       border-radius: 8px;
       box-shadow: var(--shadow);
-      position: relative;
-      z-index: 1;
+      position: relative; z-index: 1;
     }
     .home-text h1.lab-title {
       font-family: 'Space Mono', monospace;
@@ -128,17 +121,37 @@
       text-decoration: none;
       border-bottom: 1px dotted var(--secondary-color);
     }
-    .home-text h2.lab-department a:hover { opacity: 0.8; }
-    #home .home-text ul { list-style: disc inside; margin-left: 1rem; }
 
     /* Content Sections */
-    .content-section { background: var(--bg-white); padding: 2rem; border-radius: 8px; box-shadow: var(--shadow); margin-bottom: 2rem; }
-    h2 { font-family: 'Space Mono', monospace; color: #2c3e50; font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1rem; }
-    h3 { font-family: 'Lato', sans-serif; color: #34495e; margin: 1.5rem 0 1rem; font-size: clamp(1.1rem, 2.5vw, 1.3rem); }
+    .content-section {
+      background: var(--bg-white);
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      margin-bottom: 2rem;
+    }
+    h2 {
+      font-family: 'Space Mono', monospace;
+      color: #2c3e50;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      margin-bottom: 1rem;
+    }
+    h3 {
+      font-family: 'Lato', sans-serif;
+      color: #34495e;
+      margin: 1.5rem 0 1rem;
+      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    }
     ul { list-style: disc inside; margin-left: 1rem; }
 
     /* Footer */
-    footer { background: #34495e; color: var(--bg-white); text-align: center; padding: 1.5rem 0; margin-top: auto; }
+    footer {
+      background: #34495e;
+      color: var(--bg-white);
+      text-align: center;
+      padding: 1.5rem 0;
+      margin-top: auto;
+    }
 
     /* Responsive */
     @media (max-width: 768px) {
@@ -152,7 +165,6 @@
       .content-section { padding: 1.5rem; margin-bottom: 1rem; }
       p { text-align: left; hyphens: none; }
     }
-
     @media (max-width: 480px) {
       #home .hero-banner { height: 30vh; }
       #home .home-text { margin: -5vh auto 1rem; padding: 1.2rem; }
@@ -180,67 +192,123 @@
       </nav>
     </div>
   </header>
+
   <main id="main-content" class="container">
+    <!-- Home Section -->
     <section id="home" class="page active" aria-label="Home">
       <div class="hero-banner" role="img" aria-label="Plant phylogenetics laboratory banner"></div>
       <div class="home-text">
         <h1 class="lab-title">Plant Phylogenetics Lab</h1>
-        <h2 class="lab-department"><a href="https://www.bsu.edu/academics/collegesanddepartments/biology" target="_blank" rel="noopener">Department of Biology</a>, Ball State University</h2>
+        <h2 class="lab-department">
+          <a href="https://www.bsu.edu/academics/collegesanddepartments/biology"
+             target="_blank" rel="noopener">
+            Department of Biology
+          </a>, Ball State University
+        </h2>
         <p>In our lab, we construct evolutionary trees of living organisms, mainly plants, known as phylogenies. We utilize DNA and morphological trait data to build these phylogenies. By analyzing these phylogenies, we investigate how and when different groups of plants (and animals) have evolved over macroevolutionary timescales. Additionally, we contribute to organizing the vast diversity of living organisms into distinct groups based on their evolutionary relationships, a field known as systematics.</p>
-        <h3>Areas of Research</h3>
-        <ul>
-          <li>Plant Systematics</li>
-          <li>Phylogenetics Theory &amp; Comparative Methods</li>
-          <li>Bioinformatics</li>
-          <li>Macroevolutionary Processes</li>
-        </ul>
       </div>
     </section>
+
+    <!-- Research Section -->
     <section id="research" class="page" aria-label="Research">
       <div class="content-section">
-        <h2>Macroevolutionary Dynamics and Speciation in Tropical Plants</h2>
-        <p>The extraordinary diversity of angiosperms worldwide reflects macroevolutionary processes unfolding over deep time, generating both broad distributions and extreme endemism. These forces—most intense in tropical mountains and islands—produce novel traits, reproductive strategies, and ultimately new species. Our lab uses the pantropical tribe <em>Spermacoceae</em> (~1,500 spp.) as a model system to investigate how trait evolution, breeding-system shifts, and genomic change interact to generate biodiversity. We integrate field, phylogenetic, and genomic approaches to elucidate how microevolutionary mechanisms scale up to macroevolutionary patterns.</p>
+        <h2>1. Macroevolutionary Dynamics and Speciation in Tropical Plants</h2>
+        <p>
+          The extraordinary diversity of angiosperms worldwide reflects macroevolutionary processes unfolding over deep time, generating both broad distributions and extreme endemism. These forces—most intense in tropical mountains and islands—produce novel traits, reproductive strategies, and ultimately new species. Our lab uses the pantropical tribe <em>Spermacoceae</em> (~1,500 spp.) as a model system to investigate how trait evolution, breeding-system shifts, and genomic change interact to generate biodiversity. We integrate field, phylogenetic, and genomic approaches to reveal how microevolutionary mechanisms scale up to macroevolutionary patterns.
+        </p>
+        <hr>
         <h3>Trait Lability, Polyploidy, and the Genomics of Speciation</h3>
-        <p>Speciation is shaped by reproductive-system evolution, hybridization, and genomic divergence across space and time. <em>Spermacoceae</em> exemplifies trait lability:</p>
+        <p>
+          Speciation is a multi-level process shaped by the interplay of reproductive-system evolution, hybridization, and genomic divergence across space and time. <em>Spermacoceae</em> exemplifies exceptional trait lability:
+        </p>
         <ul>
           <li><strong>Breeding-system diversity.</strong> Distylous <em>Houstonia caerulea</em> vs. homostylous <em>H. pusilla</em>; “leaky dioecy” in island <em>Kadua</em> and <em>Nesohedyotis</em>.</li>
-          <li><strong>Growth-form transitions.</strong> Independent woodiness in <em>Hedyotis</em>, <em>Kadua</em>, <em>Arcytophyllum</em> linked to montane and insular colonization.</li>
+          <li><strong>Growth-form transitions.</strong> Independent woodiness in <em>Hedyotis</em>, <em>Kadua</em>, and <em>Arcytophyllum</em> linked to montane and insular colonization.</li>
           <li><strong>Morphological lability.</strong> Shifts in fruit, seed, and pollen traits blur taxonomic boundaries.</li>
-          <li><strong>Polyploidy &amp; hybridization.</strong> Autopolyploid <em>Houstonia</em> breaks diploid barriers (Church &amp; Taylor 2005) and fuels gene flow among tetraploids (Glennon &amp; Church 2015).</li>
+          <li><strong>Polyploidy & hybridization.</strong> Autopolyploid <em>Houstonia</em> breaks diploid barriers (Church & Taylor 2005) and fuels gene flow among tetraploids (Glennon & Church 2015).</li>
         </ul>
-        <h2>Taxonomic Challenges in Spermacoceae</h2>
-        <p>High morphological polymorphism and homoplasy cause generic polyphyly (Kårehed et al. 2008; Groeninckx et al. 2009). My lab works with international collaborators to resolve genera such as <em>Borreria</em>, <em>Diodia</em>, and <em>Spermacoce</em>.</p>
-        <h2>Phylogenomic Congruence</h2>
-        <p>We assess gene-tree discordance due to incomplete lineage sorting and sampling error under a Bayesian framework, using Bayes factors on simulated and empirical datasets to detect congruence prior to species-tree inference.</p>
+        <p>
+          Hybridization can either homogenize lineages through ongoing gene flow or—via adaptive introgression and allopolyploidy—accelerate divergence and spawn novel hybrid taxa. Which outcome prevails depends on selection pressures, recombination patterns, and the genomic architecture of barrier loci.
+        </p>
+        <hr>
+        <h2>2. Taxonomic Challenges in <em>Spermacoceae</em></h2>
+        <p>
+          The high degree of morphological polymorphism and homoplasy in <em>Spermacoceae</em> has made generic delimitation particularly challenging. Historical confusion arose from overlapping traits dating back to Linnaeus (e.g., <em>Diodia</em>, <em>Hedyotis</em>, <em>Houstonia</em>). Phylogenetic studies (Kårehed et al. 2008; Groeninckx et al. 2009) reveal several genera are polyphyletic, prompting ongoing revisions with international collaborators.
+        </p>
+        <hr>
+        <h2>3. Phylogenomic Congruence & Data Discordance</h2>
+        <p>
+          Reconstructing a reliable species tree can be challenged by gene-tree discordance from sampling error or incomplete lineage sorting. With large-scale genomic data, this discordance intensifies. We assess discordance using Bayes factors on simulated and empirical datasets to distinguish stochastic vs. biological causes before inferring species trees.
+        </p>
+        <hr>
+        <h3>Our Current Research Questions</h3>
+        <ul>
+          <li><strong>Geographic trait evolution:</strong> How do breeding-system shifts, hybridization, and polyploidy differ between island vs. continental clades?</li>
+          <li><strong>Polyploid evolution in <em>Houstonia–Stenaria</em>:</strong> How frequent are independent polyploidization events and their impact on diversity?</li>
+          <li><strong>Genomic speciation mechanisms:</strong> In hyperdiverse, endemic clades like <em>Hedyotis</em> and <em>Kadua</em>, do adaptive radiation or reticulate processes dominate? Which genomic signatures prevail—reinforcement, adaptive introgression, or hybrid speciation?</li>
+          <li><strong>Evolution of woodiness:</strong> What genomic changes drive repeated herbaceous-to-woody transitions in montane <em>Hedyotis</em>?</li>
+          <li><strong>Macroevolutionary correlates:</strong> Which traits—woodiness, breeding-system diversity, or polyploidy—best predict elevated diversification rates?</li>
+        </ul>
+        <p>
+          By combining fieldwork, phylogenomics, population genomics, comparative transcriptomics, and macroevolutionary modeling, we aim to elucidate how micro- and macroevolutionary processes interact to shape the spectacular diversity of tropical, insular, and continental plant lineages.
+        </p>
       </div>
     </section>
+
+    <!-- CV Section -->
     <section id="cv" class="page" aria-label="Curriculum Vitae">
-      <div class="content-section"><h2>Curriculum Vitae</h2><p>Download my complete CV for detailed information about my academic background, research experience, publications, and professional activities.</p></div>
+      <div class="content-section">
+        <h2>Curriculum Vitae</h2>
+        <p>Download my complete CV for detailed information about my academic background, research experience, publications, and professional activities.</p>
+      </div>
     </section>
+
+    <!-- Contact Section -->
     <section id="contact" class="page" aria-label="Contact">
       <div class="content-section">
         <h2>Contact Information</h2>
         <div class="contact-info">
-          <p><strong>Dr. Suman Neupane</strong><br>Department of Biology<br>Ball State University<br>Muncie, IN 47306</p>
+          <p><strong>Dr. Suman Neupane</strong><br>
+          Department of Biology<br>
+          Ball State University<br>
+          Muncie, IN 47306</p>
           <p>Email: youremail@bsu.edu</p>
         </div>
       </div>
     </section>
+
+    <!-- Tutorials Section -->
     <section id="tutorials" class="page" aria-label="Tutorials">
-      <div class="content-section"><h2>Tutorials</h2><ul class="tutorial-list"><li>Introduction to Phylogenetic Analysis</li><li>Working with DNA Sequence Data</li><li>Tree Building Methods</li><li>Comparative Methods in R</li></ul></div>
+      <div class="content-section">
+        <h2>Tutorials</h2>
+        <ul class="tutorial-list">
+          <li>Introduction to Phylogenetic Analysis</li>
+          <li>Working with DNA Sequence Data</li>
+          <li>Tree Building Methods</li>
+          <li>Comparative Methods in R</li>
+        </ul>
+      </div>
     </section>
   </main>
-  <footer><div class="container"><p>&copy; 2024 Suman Neupane. All rights reserved.</p></div></footer>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Suman Neupane. All rights reserved.</p>
+    </div>
+  </footer>
+
   <script>
     // Mobile menu toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.getElementById('main-nav');
     const navLinks = document.querySelectorAll('.nav-link');
+
     menuToggle.addEventListener('click', () => {
       const isActive = nav.classList.toggle('active');
       menuToggle.classList.toggle('active');
       menuToggle.setAttribute('aria-expanded', isActive);
     });
+
     function showPage(pageName) {
       document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
       const selected = document.getElementById(pageName);
@@ -253,16 +321,21 @@
       menuToggle.setAttribute('aria-expanded','false');
       window.scrollTo({ top:0, behavior:'smooth' });
     }
-    navLinks.forEach(link => link.addEventListener('click', e => {
-      e.preventDefault();
-      const target = link.getAttribute('href').substring(1);
-      showPage(target);
-      history.pushState(null,'',`#${target}`);
-    }));
+
+    navLinks.forEach(link =>
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const target = link.getAttribute('href').substring(1);
+        showPage(target);
+        history.pushState(null,'',`#${target}`);
+      })
+    );
+
     window.addEventListener('popstate', () => {
       const hash = location.hash.substring(1) || 'home';
       showPage(hash);
     });
+
     window.addEventListener('load', () => {
       const hash = location.hash.substring(1) || 'home';
       showPage(hash);

@@ -86,9 +86,6 @@
       width: 100%;
     }
 
-    /* Mobile Menu Toggle */
-    .menu-toggle { display: none; }
-
     /* Main Content */
     main { padding-top: var(--header-height); min-height: calc(100vh - var(--header-height)); }
 
@@ -134,26 +131,18 @@
     .home-text h2.lab-department a:hover { opacity: 0.8; }
     #home .home-text ul { list-style: disc inside; margin-left: 1rem; }
 
-    /* Updated Research Section */
-    #research .content-section {
-      background: var(--bg-white);
-      padding: 2rem; border-radius: 8px; box-shadow: var(--shadow);
-      margin-bottom: 2rem;
-    }
-    #research h2 { font-family: 'Space Mono', monospace; color: #2c3e50; font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1rem; }
-    #research h3 { font-family: 'Lato', sans-serif; color: #34495e; margin: 1.5rem 0 1rem; font-size: clamp(1.1rem, 2.5vw, 1.3rem); }
-    #research ul { list-style: disc inside; margin-left: 1rem; }
+    /* Content Sections */
+    .content-section { background: var(--bg-white); padding: 2rem; border-radius: 8px; box-shadow: var(--shadow); margin-bottom: 2rem; }
+    h2 { font-family: 'Space Mono', monospace; color: #2c3e50; font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1rem; }
+    h3 { font-family: 'Lato', sans-serif; color: #34495e; margin: 1.5rem 0 1rem; font-size: clamp(1.1rem, 2.5vw, 1.3rem); }
+    ul { list-style: disc inside; margin-left: 1rem; }
 
     /* Footer */
-    footer {
-      background: #34495e; color: var(--bg-white); text-align: center;
-      padding: 1.5rem 0; margin-top: auto;
-    }
+    footer { background: #34495e; color: var(--bg-white); text-align: center; padding: 1.5rem 0; margin-top: auto; }
 
     /* Responsive */
     @media (max-width: 768px) {
       header { height: var(--header-height-mobile); }
-      .site-title { font-size: 1.2rem; }
       nav { position: fixed; top: var(--header-height-mobile); left: -100%; width: 100%; height: calc(100vh - var(--header-height-mobile)); background: var(--primary-color); transition: left 0.3s ease; overflow-y: auto; }
       nav.active { left: 0; }
       nav ul { flex-direction: column; padding: 2rem; }
@@ -164,7 +153,6 @@
       p { text-align: left; hyphens: none; }
     }
 
-    /* Small Mobile */
     @media (max-width: 480px) {
       #home .hero-banner { height: 30vh; }
       #home .home-text { margin: -5vh auto 1rem; padding: 1.2rem; }
@@ -175,7 +163,6 @@
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-
   <header>
     <div class="header-content">
       <a href="#home" class="site-title">Suman Neupane</a>
@@ -193,15 +180,13 @@
       </nav>
     </div>
   </header>
-
   <main id="main-content" class="container">
-    <!-- Home Section -->
     <section id="home" class="page active" aria-label="Home">
       <div class="hero-banner" role="img" aria-label="Plant phylogenetics laboratory banner"></div>
       <div class="home-text">
         <h1 class="lab-title">Plant Phylogenetics Lab</h1>
         <h2 class="lab-department"><a href="https://www.bsu.edu/academics/collegesanddepartments/biology" target="_blank" rel="noopener">Department of Biology</a>, Ball State University</h2>
-        <p>In our lab, we construct evolutionary trees of living organisms, mainly plants, known as phylogenies. We utilize DNA and morphological trait data to build these phylogenies. By analyzing these phylogenies, we investigate the how, where, and when different groups of plants (and animals) have evolved over macroevolutionary timescales. Additionally, we contribute to organizing the vast diversity of living organisms into distinct groups based on their evolutionary relationships, a field known as systematics.</p>
+        <p>In our lab, we construct evolutionary trees of living organisms, mainly plants, known as phylogenies. We utilize DNA and morphological trait data to build these phylogenies. By analyzing these phylogenies, we investigate how and when different groups of plants (and animals) have evolved over macroevolutionary timescales. Additionally, we contribute to organizing the vast diversity of living organisms into distinct groups based on their evolutionary relationships, a field known as systematics.</p>
         <h3>Areas of Research</h3>
         <ul>
           <li>Plant Systematics</li>
@@ -211,37 +196,27 @@
         </ul>
       </div>
     </section>
-
-    <!-- Research Section -->
     <section id="research" class="page" aria-label="Research">
       <div class="content-section">
         <h2>Macroevolutionary Dynamics and Speciation in Tropical Plants</h2>
         <p>The extraordinary diversity of angiosperms worldwide reflects macroevolutionary processes unfolding over deep time, generating both broad distributions and extreme endemism. These forces—most intense in tropical mountains and islands—produce novel traits, reproductive strategies, and ultimately new species. Our lab uses the pantropical tribe <em>Spermacoceae</em> (~1,500 spp.) as a model system to investigate how trait evolution, breeding-system shifts, and genomic change interact to generate biodiversity. We integrate field, phylogenetic, and genomic approaches to elucidate how microevolutionary mechanisms scale up to macroevolutionary patterns.</p>
         <h3>Trait Lability, Polyploidy, and the Genomics of Speciation</h3>
-        <p>Speciation is a multi-level process shaped by the interplay of reproductive-system evolution, hybridization, and genomic divergence across space and time. <em>Spermacoceae</em> exemplifies exceptional trait lability:</p>
+        <p>Speciation is shaped by reproductive-system evolution, hybridization, and genomic divergence across space and time. <em>Spermacoceae</em> exemplifies trait lability:</p>
         <ul>
-          <li><strong>Breeding-system diversity.</strong> Heterostyly occurs without clear phylogenetic signal: diploid <em>Houstonia caerulea</em> is distylous (heterostylous), whereas its sister species <em>H. pusilla</em> is homostylous and largely self-fertile. Island radiations show even more extreme shifts—“leaky dioecy” in Hawaiian <em>Kadua</em> and South-Atlantic <em>Nesohedyotis</em>.</li>
-          <li><strong>Growth-form transitions.</strong> Although ancestrally herbaceous, <em>Spermacoceae</em> has independently evolved woodiness multiple times—especially in <em>Hedyotis</em>, <em>Kadua</em>, and <em>Arcytophyllum</em>. Neupane et al. (2017) link these woody shifts to colonization of montane and insular habitats, where woody forms often dominate.</li>
-          <li><strong>Morphological lability.</strong> Frequent changes in fruit dehiscence, seed morphology, and pollen traits blur taxonomic boundaries and complicate genus-level delimitation.</li>
-          <li><strong>Polyploidy &amp; hybridization.</strong> Polyploidy is pervasive—particularly in eastern North American <em>Houstonia</em>. Church &amp; Taylor (2005) showed genome duplication breaks down diploid reproductive barriers, enabling hybridization; Glennon &amp; Church (2015) found that tetraploids harbor greater genetic diversity and exchange genes largely with other tetraploids. Together, breeding-system shifts, morphological flexibility, and polyploidy forge a dynamic mosaic of reproductive barriers.</li>
+          <li><strong>Breeding-system diversity.</strong> Distylous <em>Houstonia caerulea</em> vs. homostylous <em>H. pusilla</em>; “leaky dioecy” in island <em>Kadua</em> and <em>Nesohedyotis</em>.</li>
+          <li><strong>Growth-form transitions.</strong> Independent woodiness in <em>Hedyotis</em>, <em>Kadua</em>, <em>Arcytophyllum</em> linked to montane and insular colonization.</li>
+          <li><strong>Morphological lability.</strong> Shifts in fruit, seed, and pollen traits blur taxonomic boundaries.</li>
+          <li><strong>Polyploidy &amp; hybridization.</strong> Autopolyploid <em>Houstonia</em> breaks diploid barriers (Church &amp; Taylor 2005) and fuels gene flow among tetraploids (Glennon &amp; Church 2015).</li>
         </ul>
-        <p>Hybridization can either homogenize lineages through ongoing gene flow or, via adaptive introgression and allopolyploidy, accelerate divergence and spawn novel hybrid taxa. Which outcome prevails depends on selection pressures, recombination patterns, and the genomic architecture of barrier loci—all of which vary across landscapes and through time.</p>
         <h2>Taxonomic Challenges in Spermacoceae</h2>
-        <p>The high degree of morphological polymorphism and homoplasy in <em>Spermacoceae</em> has made generic delimitation particularly challenging. Historically, taxonomic confusion arose from overlapping morphological traits, leading to disagreements dating back to Linnaeus, who first described many genera (e.g., <em>Diodia</em>, <em>Hedyotis</em>, <em>Houstonia</em>). Phylogenetic studies (Kårehed et al. 2008; Groeninckx et al. 2009) have revealed polyphyly in large genera such as <em>Borreria</em>, <em>Diodia</em>, <em>Hedyotis</em>, and <em>Spermacoce</em>, prompting splits into monophyletic groups and leaving others unresolved. Our lab collaborates with taxonomists from Argentina and Belgium to resolve these issues.</p>
-        <h2>Phylogenomic Congruence &amp; Data Discordance</h2>
-        <p>Reconstructing a reliable species tree can be challenging due to discordance among gene trees caused by stochastic error (e.g., sampling artifacts) or systematic error (e.g., deep coalescence/incomplete lineage sorting). With large-scale genomic data, incongruence can intensify. While new species-tree methods are emerging, it is essential to assess discordance and its sources before interpretation. Our work examines DNA-data combinability (targeted regions vs. whole genomes), phylogenetic information content, taxon sampling, and missing data effects under a Bayesian framework. We use Bayes factors (via marginal likelihoods) on simulated and empirical datasets to detect phylogenomic congruence and inform best practices for robust tree inference.</p>
+        <p>High morphological polymorphism and homoplasy cause generic polyphyly (Kårehed et al. 2008; Groeninckx et al. 2009). My lab works with international collaborators to resolve genera such as <em>Borreria</em>, <em>Diodia</em>, and <em>Spermacoce</em>.</p>
+        <h2>Phylogenomic Congruence</h2>
+        <p>We assess gene-tree discordance due to incomplete lineage sorting and sampling error under a Bayesian framework, using Bayes factors on simulated and empirical datasets to detect congruence prior to species-tree inference.</p>
       </div>
     </section>
-
-    <!-- CV Section -->
     <section id="cv" class="page" aria-label="Curriculum Vitae">
-      <div class="content-section">
-        <h2>Curriculum Vitae</h2>
-        <p>Download my complete CV for detailed information about my academic background, research experience, publications, and professional activities.</p>
-      </div>
+      <div class="content-section"><h2>Curriculum Vitae</h2><p>Download my complete CV for detailed information about my academic background, research experience, publications, and professional activities.</p></div>
     </section>
-
-    <!-- Contact Section -->
     <section id="contact" class="page" aria-label="Contact">
       <div class="content-section">
         <h2>Contact Information</h2>
@@ -251,41 +226,23 @@
         </div>
       </div>
     </section>
-
-    <!-- Tutorials Section -->
     <section id="tutorials" class="page" aria-label="Tutorials">
-      <div class="content-section">
-        <h2>Tutorials</h2>
-        <ul class="tutorial-list">
-          <li>Introduction to Phylogenetic Analysis</li>
-          <li>Working with DNA Sequence Data</li>
-          <li>Tree Building Methods</li>
-          <li>Comparative Methods in R</li>
-        </ul>
-      </div>
+      <div class="content-section"><h2>Tutorials</h2><ul class="tutorial-list"><li>Introduction to Phylogenetic Analysis</li><li>Working with DNA Sequence Data</li><li>Tree Building Methods</li><li>Comparative Methods in R</li></ul></div>
     </section>
   </main>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2024 Suman Neupane. All rights reserved.</p>
-    </div>
-  </footer>
-
+  <footer><div class="container"><p>&copy; 2024 Suman Neupane. All rights reserved.</p></div></footer>
   <script>
     // Mobile menu toggle
     const menuToggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('nav');
+    const nav = document.getElementById('main-nav');
     const navLinks = document.querySelectorAll('.nav-link');
-
     menuToggle.addEventListener('click', () => {
       const isActive = nav.classList.toggle('active');
       menuToggle.classList.toggle('active');
       menuToggle.setAttribute('aria-expanded', isActive);
     });
-
     function showPage(pageName) {
-      document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
       const selected = document.getElementById(pageName);
       if (selected) selected.classList.add('active');
       navLinks.forEach(link => link.classList.remove('active'));
@@ -296,23 +253,20 @@
       menuToggle.setAttribute('aria-expanded','false');
       window.scrollTo({ top:0, behavior:'smooth' });
     }
-
     navLinks.forEach(link => link.addEventListener('click', e => {
       e.preventDefault();
       const target = link.getAttribute('href').substring(1);
       showPage(target);
       history.pushState(null,'',`#${target}`);
     }));
-
     window.addEventListener('popstate', () => {
       const hash = location.hash.substring(1) || 'home';
       showPage(hash);
     });
-
     window.addEventListener('load', () => {
       const hash = location.hash.substring(1) || 'home';
       showPage(hash);
     });
-  <**script**>
+  </script>
 </body>
 </html>

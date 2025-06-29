@@ -133,6 +133,19 @@
       margin-bottom:1.5rem;
       color:var(--secondary-color);
     }
+    
+    .home-text h2.lab-department a {
+      color: var(--secondary-color);
+      text-decoration: none;
+    }
+    
+    .home-text h2.lab-department a:visited {
+      color: var(--secondary-color);
+    }
+    
+    .home-text h2.lab-department a:hover {
+      text-decoration: underline;
+    }
 
     /* Content sections */
     .content-section {
@@ -156,6 +169,41 @@
     }
     p { margin-bottom:1rem; text-align:justify; hyphens:auto; }
     ul { list-style:disc inside; margin-left:1rem; }
+
+    /* Image styling - NEW */
+    .research-images {
+      float: right; 
+      width: 320px; 
+      margin-left: 110px;
+      margin-bottom: 20px;
+      margin-right: -60px;
+    }
+    
+    .research-images img {
+      width: 100%;
+      border-radius: 8px;
+      display: block;
+      margin-bottom: 10px;
+      margin-left: -10%;
+    }
+    
+    .research-images img:nth-child(2) {
+      width: 145%;
+      margin-left: -50%;
+    }
+    
+    .phylo-images {
+      float: right; 
+      margin-left: 20px; 
+      width: 300px;
+    }
+    
+    .phylo-images img {
+      width: 100%; 
+      margin-bottom: 10px; 
+      border-radius: 6px;
+      display: block;
+    }
 
     /* Footer */
     footer {
@@ -197,6 +245,19 @@
       }
       .content-section { padding:1.5rem; margin-bottom:1rem; }
       p { hyphens:none; }
+      
+      /* Mobile image fixes - NEW */
+      .research-images, .phylo-images {
+        float: none;
+        width: 100%;
+        margin: 20px 0;
+        text-align: center;
+      }
+      
+      .research-images img, .phylo-images img {
+        max-width: 100%;
+        height: auto;
+      }
     }
     @media (max-width:480px) {
       #home .hero-banner { height:30vh; }
@@ -240,11 +301,17 @@
 <section aria-label="Research" class="page" id="research">
 <div class="content-section">
 <h2>1. Macroevolutionary Dynamics and Speciation in Tropical Plants</h2>
-<p>The extraordinary diversity of angiosperms worldwide reflects macroevolutionary processes unfolding over deep time, generating both broad distributions and extreme endemism. These forces—most intense in tropical mountains and islands—produce novel traits, reproductive strategies, and ultimately new species. Our lab uses the pantropical tribe Spermacoceae (~1,500 spp.) as a model system to investigate how trait evolution, breeding-system shifts, and genomic change interact to generate biodiversity. We integrate field, phylogenetic, and genomic approaches to reveal how microevolutionary mechanisms scale up to macroevolutionary patterns.</p><img alt="Hedyotis india" src="Hedyotis_india.jpg" style="float:right; width:250px; margin-left:20px; border-radius:8px;"/><img src="Hedyotis_macro.png" style="float:right; clear:right; margin: 20px;"/>
+<p>The extraordinary diversity of angiosperms worldwide reflects macroevolutionary processes unfolding over deep time, generating both broad distributions and extreme endemism. These forces—most intense in tropical mountains and islands—produce novel traits, reproductive strategies, and ultimately new species. Our lab uses the pantropical tribe Spermacoceae (~1,500 spp.) as a model system to investigate how trait evolution, breeding-system shifts, and genomic change interact to generate biodiversity. We integrate field, phylogenetic, and genomic approaches to reveal how microevolutionary mechanisms scale up to macroevolutionary patterns.</p>
+
+<div class="research-images">
+  <img alt="Hedyotis india" src="Hedyotis_india.jpg"/>
+  <img src="Hedyotis_macro.png" alt="Hedyotis macro"/>
+</div>
+
 <hr/>
 <h3>Trait Lability, Polyploidy, and the Genomics of Speciation</h3>
 <ul>
-<li><strong>Breeding-system diversity.</strong> Heterostyly occurs without clear phylogenetic signal: diploid <em>Houstonia caerulea</em> is distylous (heterostylous), whereas its sister species <em>H. pusilla</em> is homostylous and largely self-fertile. Island radiations show even more extreme shifts—“leaky dioecy” in Hawaiian <em>Kadua</em> and South-Atlantic <em>Nesohedyotis</em>.</li>
+<li><strong>Breeding-system diversity.</strong> Heterostyly occurs without clear phylogenetic signal: diploid <em>Houstonia caerulea</em> is distylous (heterostylous), whereas its sister species <em>H. pusilla</em> is homostylous and largely self-fertile. Island radiations show even more extreme shifts—"leaky dioecy" in Hawaiian <em>Kadua</em> and South-Atlantic <em>Nesohedyotis</em>.</li>
 <li><strong>Growth-form transitions.</strong> Although ancestrally herbaceous, Spermacoceae has independently evolved woodiness multiple times—especially in <em>Hedyotis</em>, <em>Kadua</em>, and <em>Arcytophyllum</em>. Neupane et al. (2017) link these woody shifts to colonization of montane and insular habitats, where woody forms often dominate.</li>
 <li><strong>Morphological lability.</strong> Frequent changes in fruit dehiscence, seed morphology, and pollen traits blur taxonomic boundaries and complicate genus-level delimitation.</li>
 <li><strong>Polyploidy &amp; hybridization.</strong> Polyploidy is pervasive—particularly in eastern North-American <em>Houstonia</em>. Church &amp; Taylor (2005) showed genome duplication breaks down diploid reproductive barriers, enabling hybridization; Glennon &amp; Church (2015) found that tetraploids harbor greater genetic diversity and exchange genes largely with other tetraploids. Together, breeding-system shifts, morphological flexibility, and polyploidy forge a dynamic mosaic of reproductive barriers.</li>
@@ -261,12 +328,12 @@
 </ul>
 <p>By combining fieldwork, phylogenomics, population genomics, comparative transcriptomics, and macroevolutionary modeling, we aim to unravel how micro- and macroevolutionary processes interact to shape the spectacular diversity of tropical, insular, and continental plant lineages.</p>
 <h2>2. Taxonomic challenges in Spermacoceae</h2>
-<p>The high degree of morphological polymorphism and homoplasy in Spermacoceae has made generic delimitation particularly challenging. Historically, taxonomic confusion has arisen from inconsistent and overlapping morphological traits, leading to long-standing disagreements dating back to Linnaeus, who first described many of the group’s genera, including <em>Diodia</em>, <em>Hedyotis</em>, <em>Houstonia</em>, <em>Oldenlandia</em>, <em>Richardia</em>, and <em>Spermacoce</em>. Phylogenies of the tribe have revealed that several large genera—such as <em>Borreria</em>, <em>Diodia</em>, <em>Hedyotis</em>, <em>Oldenlandia</em>, and <em>Spermacoce</em>—are polyphyletic (Kårehed et al. 2008; Groeninckx et al. 2009). Consequently, many of these genera have been split into monophyletic groups, while others (e.g., <em>Borreria</em>, <em>Oldenlandia</em>, <em>Spermacoce</em>) remain unresolved. My lab is actively addressing these taxonomic problems in collaboration with taxonomists from Argentina and Belgium.</p>
+<p>The high degree of morphological polymorphism and homoplasy in Spermacoceae has made generic delimitation particularly challenging. Historically, taxonomic confusion has arisen from inconsistent and overlapping morphological traits, leading to long-standing disagreements dating back to Linnaeus, who first described many of the group's genera, including <em>Diodia</em>, <em>Hedyotis</em>, <em>Houstonia</em>, <em>Oldenlandia</em>, <em>Richardia</em>, and <em>Spermacoce</em>. Phylogenies of the tribe have revealed that several large genera—such as <em>Borreria</em>, <em>Diodia</em>, <em>Hedyotis</em>, <em>Oldenlandia</em>, and <em>Spermacoce</em>—are polyphyletic (Kårehed et al. 2008; Groeninckx et al. 2009). Consequently, many of these genera have been split into monophyletic groups, while others (e.g., <em>Borreria</em>, <em>Oldenlandia</em>, <em>Spermacoce</em>) remain unresolved. My lab is actively addressing these taxonomic problems in collaboration with taxonomists from Argentina and Belgium.</p>
 
 <h2>3. Phylogenomic Congruence</h2>
-<div style="float:right; margin-left:20px; width:300px;">
-  <img src="coal.jpg" alt="Bayes factor example" style="width:100%; margin-bottom:10px; border-radius:6px;"/>
-  <img src="coal2.png" alt="Model comparison" style="width:100%; border-radius:6px;"/>
+<div class="phylo-images">
+  <img src="coal.jpg" alt="Bayes factor example"/>
+  <img src="coal2.png" alt="Model comparison"/>
 </div>
 
 <p>Finding a reliable phylogenetic tree can be challenging due to incongruence between data subsets resulting from stochastic error (e.g. sampling artifacts) or systematic error (e.g. deep coalescence and incomplete lineage sorting that is not accommodated by the model). With the availability of large-scale genomic DNA data from high-throughput sequencing methods, the issue of incongruence becomes even more severe in phylogeny reconstruction. Although some efficient and promising species tree methods are forthcoming, it is always advisable to assess the discordance beforehand, if any, and identify its nature (stochastic or biological) to make a meaningful interpretation of estimated phylogeny from a multi-gene phylogeny. Currently, I am investigating the issues of DNA data combinability (e.g. of different gene regions from targeted sequencing, or next-gen methods), phylogenetic information content, effect of taxonomic sampling and missing data, and the resulting systematic and stochastic bias in the phylogenetic inference under a Bayesian framework. I am particularly exploring the behavior of Bayes Factor (computed using marginal likelihood values) in detecting phylogenomic congruence (alternatively discordance) using simulations designed to create a spectrum of data sets ranging from low to high phylogenetic information content and from complete topological concordance to extreme discordance (due to deep coalescence and subsequent incomplete lineage sorting).</p>
@@ -294,7 +361,6 @@
 <h2>Tutorials</h2>
 <ul class="tutorial-list">
 <li>Introduction to Phylogenetic Analysis</li>
-<li>DNA Sequence Alignment Basics</li>
 <li>Comparative Methods in R</li>
 <li>Plant Specimen Preservation</li>
 </ul>

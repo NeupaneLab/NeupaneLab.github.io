@@ -205,6 +205,57 @@
       display: block;
     }
 
+    /* Lab Members styling */
+    .member-card {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-left: 4px solid var(--secondary-color);
+    }
+    
+    .member-card h3 {
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+    
+    .member-image {
+      float: right;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-left: 1rem;
+      margin-bottom: 1rem;
+      border: 3px solid var(--secondary-color);
+      flex-shrink: 0;
+    }
+    
+    .member-card-with-image {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    
+    .member-card-with-image .member-image {
+      float: none;
+      margin: 0;
+    }
+    
+    .member-card-with-image .member-text {
+      flex: 1;
+    }
+    
+    .member-text {
+      line-height: 1.6;
+    }
+    
+    .member-card::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
     /* Footer */
     footer {
       background:#34495e;
@@ -258,6 +309,25 @@
         max-width: 100%;
         height: auto;
       }
+      
+      /* Mobile member card fixes */
+      .member-image {
+        float: none;
+        display: block;
+        margin: 0 auto 1rem;
+        width: 120px;
+        height: 120px;
+      }
+      
+      .member-card-with-image {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      
+      .member-card-with-image .member-image {
+        margin: 0 0 1rem 0;
+      }
     }
     @media (max-width:480px) {
       #home .hero-banner { height:30vh; }
@@ -276,6 +346,7 @@
 <ul>
 <li><a class="nav-link active" href="#home">Home</a></li>
 <li><a class="nav-link" href="#research">Research</a></li>
+<li><a class="nav-link" href="#members">Lab Members</a></li>
 <li><a class="nav-link" href="#cv">CV</a></li>
 <li><a class="nav-link" href="#contact">Contact</a></li>
 <li><a class="nav-link" href="#tutorials">Tutorials</a></li>
@@ -339,6 +410,67 @@
 <p>Finding a reliable phylogenetic tree can be challenging due to incongruence between data subsets resulting from stochastic error (e.g. sampling artifacts) or systematic error (e.g. deep coalescence and incomplete lineage sorting that is not accommodated by the model). With the availability of large-scale genomic DNA data from high-throughput sequencing methods, the issue of incongruence becomes even more severe in phylogeny reconstruction. Although some efficient and promising species tree methods are forthcoming, it is always advisable to assess the discordance beforehand, if any, and identify its nature (stochastic or biological) to make a meaningful interpretation of estimated phylogeny from a multi-gene phylogeny. Currently, I am investigating the issues of DNA data combinability (e.g. of different gene regions from targeted sequencing, or next-gen methods), phylogenetic information content, effect of taxonomic sampling and missing data, and the resulting systematic and stochastic bias in the phylogenetic inference under a Bayesian framework. I am particularly exploring the behavior of Bayes Factor (computed using marginal likelihood values) in detecting phylogenomic congruence (alternatively discordance) using simulations designed to create a spectrum of data sets ranging from low to high phylogenetic information content and from complete topological concordance to extreme discordance (due to deep coalescence and subsequent incomplete lineage sorting).</p>
 </div>
 </section>
+
+<!-- Lab Members -->
+<section aria-label="Lab Members" class="page" id="members">
+<div class="content-section">
+<h2>Lab Members</h2>
+
+<div class="member-card">
+<h3>Ainsley Tierney</h3>
+<div class="member-text">
+<p>Ainsley is a biology major with a botany concentration. Her interests include DNA extraction, plant genomics, and plant extremophiles.</p>
+</div>
+</div>
+
+<div class="member-card">
+<h3>Blaire Hayes</h3>
+<div class="member-text">
+<p>Blaire is a junior botany major interested in learning computational techniques for plant phylogenetics.</p>
+</div>
+</div>
+
+<div class="member-card">
+<h3>Greg Monzel</h3>
+<div class="member-text">
+<p>Greg is a B.S./M.S. student investigating the population genomics of American sweet flag (Acorus americanus).</p>
+</div>
+</div>
+
+<div class="member-card">
+<h3>Kieran Claypool</h3>
+<div class="member-text">
+<p>Kieran is a second year MS student. Kieran is working on phylogenomics of North American Spermacoceae and angiosperm 353 phylogeny of Spermacoceae.</p>
+</div>
+</div>
+
+<div class="member-card">
+<h3>Maddie Grove</h3>
+<div class="member-text">
+<p>Maddie is a sophomore majoring in zoology and botany who loves all things evolution. She assists with DNA isolation and library preparation for Spermacoceae projects.</p>
+</div>
+</div>
+
+<div class="member-card">
+<h3>Nusrat Huda</h3>
+<div class="member-card-with-image">
+<div class="member-text">
+<p>Nusrat is an M.S. student broadly interested in plant systematics, phylogenetics, and biodiversity. Her research focuses on how plant lineages diversify, particularly within tropical flora. She explores evolutionary questions using both morphological traits and molecular tools, and applies bioinformatics approaches to analyze genetic data and construct phylogenies.</p>
+</div>
+<img src="nusrat_field.jpg" alt="Nusrat Huda in the field" class="member-image">
+</div>
+</div>
+
+<div class="member-card">
+<h3>Peyton Rodgers</h3>
+<div class="member-text">
+<p>Peyton is a senior botany major with interests in applied plant sciences. She is currently conducting chromosome counts and ploidy determination in North American Houstonia.</p>
+</div>
+</div>
+
+</div>
+</section>
+
 <!-- CV -->
 <section aria-label="CV" class="page" id="cv">
 <div class="content-section">

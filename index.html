@@ -232,18 +232,23 @@
     }
     
     .member-card-with-image {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
+      position: relative;
     }
     
     .member-card-with-image .member-image {
-      float: none;
-      margin: 0;
+      float: right;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-left: 1rem;
+      margin-bottom: 1rem;
+      border: 3px solid var(--secondary-color);
+      flex-shrink: 0;
     }
     
     .member-card-with-image .member-text {
-      flex: 1;
+      margin-right: 140px; /* Make room for the image */
     }
     
     .member-text {
@@ -326,7 +331,12 @@
       }
       
       .member-card-with-image .member-image {
+        float: none;
         margin: 0 0 1rem 0;
+      }
+      
+      .member-card-with-image .member-text {
+        margin-right: 0;
       }
     }
     @media (max-width:480px) {
@@ -346,6 +356,7 @@
 <ul>
 <li><a class="nav-link active" href="#home">Home</a></li>
 <li><a class="nav-link" href="#research">Research</a></li>
+<li><a class="nav-link" href="#publications">Publications</a></li>
 <li><a class="nav-link" href="#members">Lab Members</a></li>
 <li><a class="nav-link" href="#cv">CV</a></li>
 <li><a class="nav-link" href="#contact">Contact</a></li>
@@ -411,6 +422,14 @@
 </div>
 </section>
 
+<!-- Publications -->
+<section aria-label="Publications" class="page" id="publications">
+<div class="content-section">
+<h2>Publications</h2>
+<p>For the full list of my publications, please visit my <a href="https://scholar.google.com/citations?user=0xXh7FUAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar profile</a>.</p>
+</div>
+</section>
+
 <!-- Lab Members -->
 <section aria-label="Lab Members" class="page" id="members">
 <div class="content-section">
@@ -454,10 +473,10 @@
 <div class="member-card">
 <h3>Nusrat Huda</h3>
 <div class="member-card-with-image">
+<img src="nusrat_field.jpg" alt="Nusrat Huda in the field" class="member-image">
 <div class="member-text">
 <p>Nusrat is an M.S. student broadly interested in plant systematics, phylogenetics, and biodiversity. Her research focuses on how plant lineages diversify, particularly within tropical flora. She explores evolutionary questions using both morphological traits and molecular tools, and applies bioinformatics approaches to analyze genetic data and construct phylogenies.</p>
 </div>
-<img src="nusrat_field.jpg" alt="Nusrat Huda in the field" class="member-image">
 </div>
 </div>
 
@@ -484,7 +503,7 @@
 <h2>Contact Information</h2>
 <p><strong>Dr. Suman Neupane</strong></p>
 <p>Department of Biology<br/>Ball State University, Muncie, IN 47306</p>
-<p>Email: youremail@bsu.edu</p>
+<p>Email: suman [dot] neupane [at] bsu [dot] edu</p>
 </div>
 </section>
 <!-- Tutorials -->

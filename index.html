@@ -357,7 +357,14 @@
         max-width: 100%;
         height: auto;
       }
-      
+
+	/* FIX: override wide image shifting on mobile */
+	.research-images img:nth-child(2) {
+ 	 width: 100%;
+  	margin-left: 5%;
+	}
+
+   
       /* Mobile member card fixes */
       .member-image {
         float: none;

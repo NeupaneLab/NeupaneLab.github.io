@@ -316,7 +316,32 @@
     @media (max-width:768px) {
       header { height:var(--header-height-mobile); }
       main { padding-top:var(--header-height-mobile); }
-      .menu-toggle { display:block; }
+     /* .menu-toggle { display:block; } */
+
+  .menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 28px;
+  gap: 4px;
+  border: 2px solid white;
+  border-radius: 6px;
+  padding: 6px;
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  border-radius: 1px;
+}
+	    
+	    
       nav {
         position:fixed;
         top:var(--header-height-mobile);
